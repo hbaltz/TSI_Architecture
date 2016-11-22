@@ -6,4 +6,4 @@
 <p>La version 1.0 d’iTowns a été diffusée en OpenSource en février 2016.</p>
 <p>iTowns est un cadre de développement écrit en Javascript/WebGL.</p>
 <p>Initialement conçue pour visualiser <a href="http://www.ign.fr/institut/innovation/stereopolis">des données image et laser acquises au niveau de la rue</a>, l’application supporte désormais beaucoup d’autres données.</p>
-<p>Dépôt GitHub : <a href="https://github.com/iTowns/itowns2">iTowns is a JS/WebGL framework for 3D geospatial data visualization</a></p>
+<p>Dépôt GitHub : <a href="https://github.com/iTowns/itowns2">iTowns 2 is the next generation of iTowns, a JS/WebGL framework for 3D geospatial data visualization</a></p>
