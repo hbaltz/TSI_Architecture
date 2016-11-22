@@ -9,7 +9,7 @@ Cet outil a été développé par l’IGN, initialement pour visualiser les donn
 
 La version 1.0 d’iTowns a été diffusée en OpenSource en février 2016.
 
-iTowns est un cadre de développement écrit en Javascript/WebGL.
+iTowns est un cadre de développement écrit en Javascript/WebGL. Il utilise la bibliothèque [three](https://threejs.org/).
 
 Initialement conçue pour visualiser [des données image et laser acquises au niveau de la rue](http://www.ign.fr/institut/innovation/stereopolis), l’application supporte désormais beaucoup d’autres données.
 
