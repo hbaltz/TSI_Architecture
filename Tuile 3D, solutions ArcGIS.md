@@ -1,5 +1,5 @@
 ####http://www.giscloud.com/blog/realtime-map-tile-rendering-benchmark-rasters-vs-vectors/
-*Comparaison des performances entre tuiles raster et tuiles vecteur
+* Comparaison des performances entre tuiles raster et tuiles vecteur
 
 ###http://www.camptocamp.com/actualite/generation-et-gestion-des-tuiles-cartographiques/
 ###Enjeux autour de la conception de tuile :
