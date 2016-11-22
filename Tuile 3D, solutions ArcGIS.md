@@ -6,7 +6,7 @@
 * Diversité des infrastructures de données géographiques
 * Mise à jour des tuiles
 
-##                                                   -----
+##------------------------------------------------------------------------------------------------------------------------
 
 ##Beaucoup de documentations ArcGIS sur les tuiles et leur mise en place
 
