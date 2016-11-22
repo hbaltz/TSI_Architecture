@@ -1,4 +1,4 @@
-Résumé les solutions clients 3d déjà existantes
+Résumé des solutions clients 3d déjà existantes
 ===============================================
 
 <table>
