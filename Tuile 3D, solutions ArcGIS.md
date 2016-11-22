@@ -19,7 +19,7 @@
 * Carte efficace : données propres, réduire la densité des données en limitant les plages d'échelle visible et par généralisation
 
 
-##"https://pro.arcgis.com/fr/pro-app/tool-reference/data-management/create-vector-tile-package.htm
+###https://pro.arcgis.com/fr/pro-app/tool-reference/data-management/create-vector-tile-package.htm
 ###Créer un paquetage de tuiles vectorielles
 * Système de coordonnées : WGS 1984 Web Mercator
 * Métadonnées de la carte en entrée : une description et des balises
