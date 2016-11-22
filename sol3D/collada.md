@@ -25,13 +25,14 @@ Le format Collada est assez particulier dans le sens où il déclare un ensemble
 
 Un fichier Collada se découpe en de grands blocs:
 * **Les entêtes XML classiques:**
+
 	<?xml version="1.0" encoding="utf-8"?>
 	<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
 Il est vital de respecter cette déclaration, sans quoi le fichier Collada ne sera pas correct.
 
 * **Les métadonnées:** 
 Ce bloc permet de définir les métadonnées. On définit ainsi l’auteur, la date de création et modification. C’est ici aussi que l’on spécifie l’unité utilisée dans le fichier ainsi que l’axe principal.
-  <asset>
+  ----<asset>
     <contributor>
       <author>Nicolas</author>
       <authoring_tool>Maya8.0 | ColladaMaya v3.05B</authoring_tool>
@@ -41,7 +42,7 @@ Ce bloc permet de définir les métadonnées. On définit ainsi l’auteur, la d
     <modified>2009-03-26T15:03:34Z</modified>
     <unit meter="0.01" name="centimeter"/>
     <up_axis>Y_UP</up_axis>
-  </asset>
+  </asset>---
 Ce bloc est essentiellement informatif et ne constitue pas un élément vital dans la construction 3D.
 
 * **Définition des propriétés physiques de la scène:** 
@@ -100,7 +101,7 @@ Ceux-ci seront utilisés sur l’ensemble de la scène pour réaliser les effets
 
 * **Construction de l’objet 3D:** 
 * **Déclaration des entêtes:** 
-es premiers entêtes pour déclarer un fichier Collada et un objet.
+les premiers entêtes pour déclarer un fichier Collada et un objet.
 <library_geometries>
     <geometry id="Box01-mesh" name="Box01">
       <mesh>
