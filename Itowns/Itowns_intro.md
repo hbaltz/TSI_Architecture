@@ -1,7 +1,6 @@
 #iTowns
 ##Une plongée immersive en 3D au cœur de la ville
-<a href="
-http://www.ign.fr/institut/innovation/itowns">iTowns</a>
+<p>Présentation : <a href="http://www.ign.fr/institut/innovation/itowns">iTowns</a></p>
 <p>iTowns est une plateforme technologique de l’IGN permettant de visualiser et d’exploiter des données géographiques 3D à travers le web</p>
 <p>Cet outil a été développé par l’IGN, initialement pour visualiser les données Street View enregistrées par le véhicule d’acquisition Stéréopolis</p>
 <p>La version 1.0 d’iTowns a été diffusée en OpenSource en février 2016.</p>
