@@ -13,7 +13,7 @@ iTowns est un cadre de développement écrit en Javascript/WebGL. Il utilise la 
 
 Initialement conçue pour visualiser [des données image et laser acquises au niveau de la rue](http://www.ign.fr/institut/innovation/stereopolis), l’application supporte désormais beaucoup d’autres données.
 
-Il est prévu que le client 3D du géoportail soit iTowns pour 2017. 
+Il est prévu que le client 3D du géoportail soit iTowns pour 2017.
 
 Tout le projet est en **open source**, les sources sont disponibles [ici](https://github.com/iTowns/itowns2).
 
@@ -55,16 +55,16 @@ Il existe deux versions d'iTowns :
  Contient beaucoup de fonctionnalités issues du monde de la recherche. Elles servent essentiellement de démonstration. Le développement sur cette version est arrêté.
   
 
- - 3d immersive sur la branche principale
+  - 3d immersive sur la branche principale
 
- 3. Version 2 : 
+ 2. Version 2 : 
 
  Branche de développement. Intègre petit à petit les fonctionnalités de la version 1.
 
- - 3d disponibles dans les branches 
- - [branche 3d-tiles](https://github.com/iTowns/itowns2/tree/3d-tiles) : utilise des tuiles vectorielles 3d
- - [branche wfs2_rebased](https://github.com/iTowns/itowns2/pull/195) : ajout du protocole WFS
-
+  - 3d disponibles dans les branches 
+  - [branche 3d-tiles](https://github.com/iTowns/itowns2/tree/3d-tiles) : utilise des tuiles vectorielles 3d
+  - [branche wfs2_rebased](https://github.com/iTowns/itowns2/pull/195) : ajout du protocole WFS
+  - Actuellement, elle a 4 couches: 3 Rasters (Otrho, Ortho CRS et ScanEX) et 1 vecteur (couche région).
 
 
 ## Installation d'iTowns
