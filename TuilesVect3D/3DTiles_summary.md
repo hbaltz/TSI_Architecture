@@ -1,11 +1,11 @@
 # Summary of Cesium 3D tiles standard proposal
 
 ## Context
-**Cesium** is an open-source browser-based geospatial visualization engine for 3D globes and maps.
+**Cesium** is an open-source browser-based geospatial visualization engine for 3D globes and maps (javascript library).
 
 Cesium has previously contributed to a standard : **glTF** (GL Transmission format), described [here](https://github.com/KhronosGroup/glTF/tree/master/specification/1.0). Basically it is a format for the transmission and loading of 3D content. More specifically, it is a WebGL runtime asset format developed by Khronos.
 
-Built on top of glTF, **3D Tile**  is an open specification for streaming massive heterogeneous 3D geospatial datasets. 
+Built on top of glTF, **3D Tile**  is an open specification for streaming massive heterogeneous 3D geospatial datasets. The implementation is open-source. 
 
 ## Aims (and qualities) of 3D Tiles
 
@@ -63,9 +63,11 @@ Coordinates of tiles within a tileset are local and use a *transform* matrix.
 
 A tileset json description contains properties for the entire tileset, including a *boundingVolume* and a short description of all its children with their own *boundingVolume*. The children can point to another json file.
 
-The creation of spatial structure (hence tilesets and tiles) can use *k-d trees*, *quadtrees*, *octtrees* or *grids*, each having specific strenght depending on the data to represent, the distribution of data and the overlapping of tiles. 
+The creation of spatial structure (hence tilesets and tiles) can use *k-d trees*, *quadtrees*, *octtrees* or *grids*, each having specific strenght depending on the data to represent, the distribution of data and the overlapping of tiles.  The choice will depend on the data.
 
 
 ## Production chain 
 
 Geospatial datasets are transformed into 3D Tiles which are then manipulated by 3D engines.
+
+[3D Tiles tools repository](https://github.com/AnalyticalGraphicsInc/3d-tiles-tools) lists tools for processing and converting tilesets. It uses Node.js.
