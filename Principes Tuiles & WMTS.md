@@ -23,14 +23,14 @@ Le tuilage a pour principe de subdiviser toute la surface d'une carte en petite 
 
 
 
-![](/home/samuel/Images/pyramidage.png) 
+![](images/pyramidage.png) 
 
 ######Division d'une couche en tuiles (blog.martzuff.net)  
 
   
 A chaque niveau de zoom, correspond un découpage en tuiles. Ces découpages doivent être définis dans une matrice des tuiles. Cette matrice inventorie l'ensemble des tuiles au niveau de zoom donné, avec leurs emprises respectives. C'est elle qui est interrogée par pour renvoyer les dalles correspondant à l'emprise de la requête.   
 
-![](/home/samuel/Images/tilematrix.png) 
+![](images/tilematrix.png) 
 
 ###### Schématisation d'une matrice des tuiles (source: api.ign.fr)
 
