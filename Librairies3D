@@ -1,0 +1,40 @@
+L'utilisation des tuiles vectorielles dans un rendu web passent absolument par des librairies permettant d'afficher la couche. 
+
+**Mapbox GL JS (https://www.mapbox.com/mapbox-gl-js/api/ )**
+Mapbox GL JS est une bibliothèque JavaScript utilisant la librairies WebGL. Elle permet d'avoir un rendu interactive à partir de :
+- tuile de vectorielle ( points, lignes et polygones ) avec une spécification Mapbox indiquée dans le dépôt Github ( https://github.com/mapbox/vector-tile-spec )
+- Mapbox Style spécification : format spécial de JSON avec un ordre d'affichage ( https://www.mapbox.com/mapbox-gl-style-spec/#root-zoom )
+La visualisation des tuiles 3D peuvent se faire avec l'option « fill-extrusion ».
+( Example de code pour la 3D https://www.mapbox.com/mapbox-gl-js/example/3d-buildings/ )
+
+**LeafletJS ( http://leafletjs.com/ )**
+LeafletJS est une bibliothèque JavaScript pour l'affichage de carte sur un environnement Desktop ou Mobile. La librairie accepte les tuiles WTMS de l'IGN ( https://github.com/mylen/leaflet.TileLayer.WMTS ) ainsi que d'autre format comme :
+- WFS-GeoJSON
+- tuile avec une source WMS
+- Better Portable Graphics
+- GeoJson tuile
+- TileJson avec une spécification Leaflet 
+- CartoBD
+- 2GIS tuile
+- L.GeoJSON  avec un encodage Google
+- mbtiles ( Sqlite bdd avec spécification Mapbox )
+Pour la composante 3D la librairie propose une visualisation de bâtiments sous forme de géométrie OSM avec la fonction OSM Buildings.
+
+**Tangram ( https://github.com/tangrams/tangram )**
+Tangram est une librairie JavaScript pour des rendus cartographique en 2D et 3D avec la librairie WebGL. Conçue pour OpenStreetMap, mais elle intègre les données GeoJson, TopoJson et les données vecteur binaire.
+API JavaScript : https://mapzen.com/documentation/tangram/Javascript-API/ 
+
+**Cesium ( https://github.com/AnalyticalGraphicsInc/cesium )**
+Cesium est une librairie Javascript pour la création 2D et 3D cartes . Elle utilise WebGL.
+Elle intègre les données suivantes :
+WMS
+Tile map service
+OpenGIS Web Map Tile Service 
+OpenStreetMap
+Bings Map
+Esri ArcGIS Mapserver
+Google Earth entreprise
+MapBox
+Tuile à partir d'image
+
+	
