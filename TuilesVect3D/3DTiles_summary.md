@@ -45,11 +45,27 @@ Version: pre-1.0
 One specification is falling behind : vector data. The difficulty concerns *cracking* and *morphing* (between tiles). See [issue #25](https://github.com/AnalyticalGraphicsInc/3d-tiles/issues/25).
 Otherwise several formats have been defined :
 
-* **b3dm** for Batched 3D Models (offline batching of heterogeneous 3D models, callable in a single web request, binary format)
-* **i3dm** for Instanced 3D Models (large number of models with small variations, like trees in many locations, binary format)
+* **b3dm** for Batched 3D Models (offline batching of heterogeneous 3D models, callable in a single web request, binary format, contains glTF)
+* **i3dm** for Instanced 3D Models (large number of models with small variations, like trees in many locations, binary format, contains glTF)
 * **pnts** for Point Cloud (massive points clouds, with position and optional properties, binary format)
-* **cmpt** for Composite
+* **cmpt** for Composite (concatenation of heterogenous tiles, binary format)
+* **Declarative Styling** contains  tileset features (json format) 
 
-## Production chain (?)
+Future plans include work on : terrain, OpenStreetMap data (currently done beforehand and not at runtime), Massive model and stars.
+
+### Description of the format 
+
+In 3D Tiles, a **tileset** is a set of **tiles** organized in a spatial data structure, the **tree**. A tile references a **feature** or set of features, such as 3D models. The **metadata** for each tile - not the actual contents - are defined in JSON, as well as the tileset.
+
+The *boundingVolume.region* defines the geographic region in radians and meters (for heights). The *geometricError* helps in using **Hierarchical Level of Detail (HLOD)**.  *url* points to binary files containing the model.
+
+Coordinates of tiles within a tileset are local and use a *transform* matrix. 
+
+A tileset json description contains properties for the entire tileset, including a *boundingVolume* and a short description of all its children with their own *boundingVolume*. The children can point to another json file.
+
+The creation of spatial structure (hence tilesets and tiles) can use *k-d trees*, *quadtrees*, *octtrees* or *grids*, each having specific strenght depending on the data to represent, the distribution of data and the overlapping of tiles. 
+
+
+## Production chain 
 
 Geospatial datasets are transformed into 3D Tiles which are then manipulated by 3D engines.
