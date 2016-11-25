@@ -28,9 +28,9 @@ Les couches de tuiles 3D doivent être dans une projection Mercator.
 Les bâtiments doivent être des polyèdres avec une empreinte au sol et un toit plat. Doivent aussi être renseigné les numéros de l'étage le plus bas et de l'étage le plus haut.
 
 	
-#### http://www.w3ds.org/doku.php?id=osm-3d_w3ds)
+#### http://www.w3ds.org/doku.php?id=osm-3d_w3ds
 	
-Liste de requêtes possibles sur un service W3DS.
+Liste de requêtes possibles sur un service W3DS.  
 
 
 ## Hugo B.
