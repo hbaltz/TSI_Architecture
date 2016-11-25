@@ -10,7 +10,7 @@
 
 ## Victor B.
 
-	[](http://wiki.openstreetmap.org/wiki/Simple_3D_buildings)
+[](http://wiki.openstreetmap.org/wiki/Simple_3D_buildings)
 	
 Détail de la construction de bâtiments dans OSM grâce aux choix des différents attributs (les bâtiments étant les objets d'une classe).
 
