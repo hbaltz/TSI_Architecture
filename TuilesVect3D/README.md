@@ -14,3 +14,5 @@ Deux exemples d'utilisation de tuiles vectorielles 3D :
 # Autres articles : 
 
 * Descriptif de MapZen et Tangram : [article](3D_tiles_vector_use.md)
+
+* Summary of Cesium 3D tiles standard proposal : [article](3DTiles_summary.md)
