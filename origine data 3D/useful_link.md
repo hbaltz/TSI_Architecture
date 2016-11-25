@@ -33,6 +33,7 @@ Les bâtiments doivent être des polyèdres avec une empreinte au sol et un toit
 Liste de requêtes possibles sur un service W3DS.  
 
 
+	
 ## Hugo B.
 
 	http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.7153&rep=rep1&type=pdf  
