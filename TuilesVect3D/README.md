@@ -8,3 +8,9 @@ Deux exemples d'utilisation de tuiles vectorielles 3D :
 [Démo](http://3d.oslandia.com/) - [sources](https://github.com/LI3DS/lopocs)
 
 * Un site avec des données d'exemple accessibles : [AnalyticalGraphicsInc](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples)
+
+
+
+# Autres articles : 
+
+* Descriptif de MapZen et Tangram : [article](3D_tiles_vector_use.md)
