@@ -10,7 +10,7 @@ La diversité des sources et des techniques conduit à une diversité quand à l
 
 La réglementation concernant la niveau de détails (LOD pour Level Of Detail) est le suivant :
 
-![](images/lod-types.jpg) 
+![](img/lod-types.jpg) 
 
 ## Données disponibles sur le territoire français :
 
