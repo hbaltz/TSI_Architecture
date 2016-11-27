@@ -59,7 +59,7 @@
 
 ## Sources :
 
-http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.7153&rep=rep1&type=pdf
-http://www.ign.fr/institut/activites/referentiel-a-grande-echelle
-http://www.esrifrance.fr/sig2009/part_ign.htm
-http://gdr-magis.imag.fr/documents/ap_SIG3D/JourneeSIG3D_2013/APSIG3D_MAGIS_Maillet.pdf
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.7153&rep=rep1&type=pdf  
+http://www.ign.fr/institut/activites/referentiel-a-grande-echelle  
+http://www.esrifrance.fr/sig2009/part_ign.htm  
+http://gdr-magis.imag.fr/documents/ap_SIG3D/JourneeSIG3D_2013/APSIG3D_MAGIS_Maillet.pdf  
