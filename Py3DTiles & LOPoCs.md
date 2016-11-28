@@ -15,22 +15,22 @@ License : LGPL2 or later.
 
 <code>
 $ git clone https://github.com/Oslandia/py3dtiles
-
+</code>
 <code>
 $ cd py3dtiles
-
+</code>
 <code>
 $ virtualenv -p /usr/bin/python3 venv
-
+<code>
 <code>
 $ . venv/bin/activate
-
+</code>
 <code>
 (venv)$ pip install -e .
-
+</code>
 <code>
 (venv)$ python setup.py install
-
+</code>
 
 ###### Read/Write .pnts file
 
