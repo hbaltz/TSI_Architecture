@@ -31,8 +31,8 @@ py3dtiles is currently used by LOPoCS, a server streaming Point Cloud from Postg
 
 Source : https://github.com/LI3DS/lopocs : Installation, use & API
 
-It is a point cloud server in Python and trhe only 3DTiles server.
-It load Point Cloud from Postgis (with pgpointcloud extension) in Cesium (3DTiles), iTowns2 (Greyhound), Potree viewer (Greyhound).
+It is a Point Cloud server in Python and trhe only 3DTiles server.
+It loads Point Cloud from Postgis (with pgpointcloud extension) in Cesium (3DTiles), iTowns2 (Greyhound), Potree viewer (Greyhound).
 
 
 ###### Greyhound format 
