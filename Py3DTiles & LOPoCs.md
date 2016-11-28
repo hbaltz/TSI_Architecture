@@ -6,7 +6,7 @@
 Source : http://www.oslandia.com/py3dtiles-en.html?utm_source=dlvr.it&utm_medium=twitter
 
 
-Date : November 2016<
+Date : November 2016
 
 ###### To use py3dtiles from sources
 
@@ -15,10 +15,20 @@ License : LGPL2 or later.
 
 <code>
 $ git clone https://github.com/Oslandia/py3dtiles
+
+
 $ cd py3dtiles
+
+
 $ virtualenv -p /usr/bin/python3 venv
+
+
 $ . venv/bin/activate
+
+
 (venv)$ pip install -e .
+
+
 (venv)$ python setup.py install
 </code>
 
