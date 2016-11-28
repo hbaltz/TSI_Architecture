@@ -32,7 +32,9 @@ Liste de requêtes possibles sur un service W3DS.
 
 #### https://medspx.fr/blog/OpenStreetMap/generation_tuiles_OSM/
 
-Tutoriel pour la création de tuiles vecteurs 2D à partir de données OSM de manière open source. Ce tutoriel détaille notamment les lignes de commandes utiles sous Debian! La première étape est la création d'une base POstGIS et l'import de données dans celle-ci. Il faut ensuite Compiler les fichiers carto-css en style MapNik puis déterminer l'emprise géographique à générer et les seuils de zoom. Enfin, il est possible de générer les tuiles et de les visualiser dans QGIS.
+Tutoriel pour la création de tuiles vecteurs 2D à partir de données OSM de manière open source. Ce tutoriel détaille notamment les lignes de commandes utiles sous Debian! 
+
+La première étape est la création d'une base POstGIS et l'import de données dans celle-ci. Il faut ensuite Compiler les fichiers carto-css en style MapNik puis déterminer l'emprise géographique à générer et les seuils de zoom. Enfin, il est possible de générer les tuiles et de les visualiser dans QGIS.
 
 ## Hugo B.
 
