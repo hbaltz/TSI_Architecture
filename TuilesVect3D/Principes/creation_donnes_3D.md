@@ -1,8 +1,8 @@
 # Résumé création de données 3D :
 
-## Technique de produtcion :
+## Technique de production :
 
-Les techniques de produtcion de données 3D ne sont pas totalment automatisée, elles se basent sur différentes sources de données
+Les techniques de production de données 3D ne sont pas totalment automatisée, elles se basent sur différentes sources de données
 (LIDAR, imagerie, etc.) et sur diverses techniques (saisie manuelle, calculs automatiques d’élévation, etc.).
 La diversité des sources et des techniques conduit à une diversité quand à la qualité et au niveau de étails des données 3D.
 
@@ -10,7 +10,7 @@ La diversité des sources et des techniques conduit à une diversité quand à l
 
 La réglementation concernant la niveau de détails (LOD pour Level Of Detail) est le suivant :
 
-![](img/lod-types.jpg) 
+![](images/lod-types.jpg) 
 
 ## Données disponibles sur le territoire français :
 
