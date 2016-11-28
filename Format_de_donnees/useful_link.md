@@ -1,4 +1,4 @@
-# Lien utiles
+# Liens utiles
 
 ## Samuel B. 
 
@@ -9,6 +9,10 @@ ArcGis offre la possibilité de créer des scènes, pour présenter des données
 Il existe deux principales manières de faire de la 3D sous ArcGis. La première consiste à plaquer des données 2D sur un modèle numérique de terrain (MNT). Les entités de la couche 2D adoptent alors l'altitude du MNT à l'endroit de leur implantation, ce qui donne donc un effet de tridimentionnalité. 
 
 Un autre moyen est celui d'intégrer directement une troisième dimension *z* en plus des traditionnelles coordonnées *(x,y)* correspondant respectivement aux axes vertical et longitudinal en 2D. Les coordonnées en *z* correspondent généralement à l'altitude. Les entités auront alors une représentation géométrique propre en 3D. Il est par exemple possible d'élever les bâtiments jusqu'à leur hauteur *z*, à partir de leur emprise au sol en *x* et *y* grâce à la fonction *Extrusion*.
+
+### http://cehelp.esri.com/help/index.jsp?topic=/com.procedural.cityengine.help/html/manual/cga/basics/toc.html
+
+Documentation du locigiel de modélisation 3D City Engine, d'ESRI. Cette partie explique le workflow qui permet au logiciel de génération une représentation 3D à partir de simples données géolocalisées en 2D. Cette extrapolation s'opère à partir de 4 choix déterminants: celui du modèle d'altitude de terrain; celui du réseau routier, qui débouche ensuite sur la construction des lots bâtis entre les mailles formées par la route; enfin l'utilisateur choisit un type de texture à appliquer à la surface des bâtiments pour donner différents effets visuels. A chacune de ces étapes l'utilisateur peut choisir d'avoir recours à des templates déjà contenus dans le logiciel pour simplifier certaines opérations.
 	
 ### https://www.quora.com/How-are-the-3D-models-of-buildings-generated-on-Google-Earth
 ### http://www.gearthblog.com/blog/archives/2014/09/google-earth-automatically-generated-3d-mesh.html
