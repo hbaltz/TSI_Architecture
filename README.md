@@ -1,6 +1,6 @@
 # TSI_Architecture
 
-## Format_de_donnees
+*** Format_de_donnees ***
 	**Bdd_Ign**
 		resume_bd_ign.md
 	**Format_3d**
@@ -13,10 +13,10 @@
 		OSM_Data.md
 	useful_link.md
 
-## Itowns
+*** Itowns ***
 	ITowns.odt ( à convertir)
 	README.md
-## TuilesVect3D
+*** TuilesVect3D ***
 	**Principes**
 		3DTiles_summary.md
 		3D_tiles_vector_use.md
