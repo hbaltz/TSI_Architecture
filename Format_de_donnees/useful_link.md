@@ -35,3 +35,7 @@ Liste de requêtes possibles sur un service W3DS.
 	http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.7153&rep=rep1&type=pdf  
 	http://www.loire.gouv.fr/comment-modeliser-un-territoire-en-3d-a893.html  
 	http://recherche.ign.fr/labos/cogit/pdf/THESES/BRASEBIN/theseMB-Final.pdf
+	
+## Mamady S.
+	
+	http://www.arcorama.fr/2011/06/feature-layers-tuilage-vectoriel.html
