@@ -2,8 +2,8 @@
 
 ## py3dtiles
 
-Source : http://www.oslandia.com/py3dtiles-en.html?utm_source=dlvr.it&utm_medium=twitter
-Date : November 2016
+<p>Source : http://www.oslandia.com/py3dtiles-en.html?utm_source=dlvr.it&utm_medium=twitter</p>
+<p>Date : November 2016</p>
 
 ###### To use py3dtiles from sources
 
@@ -20,16 +20,16 @@ $ . venv/bin/activate
 
 ###### Read/Write .pnts file
 
-https://pypi.python.org/pypi/py3dtiles/
-https://github.com/Oslandia/py3dtiles/
+<p>https://pypi.python.org/pypi/py3dtiles/</p>
+<p>https://github.com/Oslandia/py3dtiles/</p>
 
-Python module (in development) manage 3DTiles (just Point Cloud spec)
+<p>Python module (in development) manage 3DTiles (just Point Cloud spec).</p>
 
-py3dtiles is currently used by LOPoCS, a server streaming Point Cloud from Postgis, to send data to Cesium.
+<p>py3dtiles is currently used by LOPoCS, a server streaming Point Cloud from Postgis, to send data to Cesium.</p>
 
 ## LOPoCs
 
-Source : https://github.com/LI3DS/lopocs : Installation, use & API
+<p>Source : https://github.com/LI3DS/lopocs : Installation, use & API</p>
 
 It is a Point Cloud server in Python and trhe only 3DTiles server.
 It loads Point Cloud from Postgis (with pgpointcloud extension) in Cesium (3DTiles), iTowns2 (Greyhound), Potree viewer (Greyhound).
