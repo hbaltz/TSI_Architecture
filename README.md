@@ -30,5 +30,6 @@
 		bibliothèques pour 3d vector tiles.md
 		Librairies3D
 		Librairies 3D.odt
+		Py3DTiles&LOPoCs.md
 		Tuile 3D, solutions ArcGIS.md
 	README.md
