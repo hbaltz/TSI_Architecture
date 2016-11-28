@@ -9,8 +9,6 @@ ArcGis offre la possibilité de créer des scènes, pour présenter des données
 Il existe deux principales manières de faire de la 3D sous ArcGis. La première consiste à plaquer des données 2D sur un modèle numérique de terrain (MNT). Les entités de la couche 2D adoptent alors l'altitude du MNT à l'endroit de leur implantation, ce qui donne donc un effet de tridimentionnalité. 
 
 Un autre moyen est celui d'intégrer directement une troisième dimension *z* en plus des traditionnelles coordonnées *(x,y)* correspondant respectivement aux axes vertical et longitudinal en 2D. Les coordonnées en *z* correspondent généralement à l'altitude. Les entités auront alors une représentation géométrique propre en 3D. Il est par exemple possible d'élever les bâtiments jusqu'à leur hauteur *z*, à partir de leur emprise au sol en *x* et *y* grâce à la fonction *Extrusion*.
-
-### https://www.safe.com/solutions/for-data-types/3d/
 	
 ### https://www.quora.com/How-are-the-3D-models-of-buildings-generated-on-Google-Earth
 ### http://www.gearthblog.com/blog/archives/2014/09/google-earth-automatically-generated-3d-mesh.html
