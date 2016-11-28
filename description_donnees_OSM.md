@@ -1,9 +1,9 @@
 Le modèle de données du réseau routier d’OSM:
 
 Les données OpenStreetMap sont composées de 3 primitives de base :
-* Les nœuds (ou « nodes »)
+- Les nœuds (ou « nodes »)
 - Les chemins (ou « ways »)
-- Les relations
+- Les relations.
 Les nœuds sont la base de toutes les données dans OSM. Ce sont des points, qui peuvent
 être isolés pour représenter des points d'intérêt, ou ordonnés dans un chemin, ou encore
 associés dans une relation. Par exemple, un panneau de signalisation est considéré comme
