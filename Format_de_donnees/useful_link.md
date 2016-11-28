@@ -40,7 +40,7 @@ La première étape est la création d'une base POstGIS et l'import de données 
 
 Tutoriel sur l'utilisation de la librairie leaflet (JavaScript) pour intégrer des cartes sur un site.
 
-A noter qu'il est également fait mention de deux autres bibliothèques connues qui ont le même usage: la librairie de Google liée à Google Maps (https://developers.google.com/maps/)et Open Layers qui permet l’affichage de fonds de carte tuilés (http://openlayers.org/).
+A noter qu'il est également fait mention de deux autres bibliothèques connues qui ont le même usage: la librairie de Google liée à Google Maps (https://developers.google.com/maps/) et Open Layers qui permet l’affichage de fonds de carte tuilés (http://openlayers.org/).
 
 ## Hugo B.
 
