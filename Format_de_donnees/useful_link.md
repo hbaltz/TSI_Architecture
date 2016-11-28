@@ -36,6 +36,12 @@ Tutoriel pour la création de tuiles vecteurs 2D à partir de données OSM de ma
 
 La première étape est la création d'une base POstGIS et l'import de données dans celle-ci. Il faut ensuite Compiler les fichiers carto-css en style MapNik puis déterminer l'emprise géographique à générer et les seuils de zoom. Enfin, il est possible de générer les tuiles et de les visualiser dans QGIS.
 
+#### http://blog.netapsys.fr/open-street-map-partie-2-integration-dune-carte-avec-leaflet/
+
+Tutoriel sur l'utilisation de la librairie leaflet (JavaScript) pour intégrer des cartes sur un site.
+
+A noter qu'il est également fait mention de deux autres bibliothèques connues qui ont le même usage: la librairie de Google liée à Google Maps (https://developers.google.com/maps/)et Open Layers qui permet l’affichage de fonds de carte tuilés (http://openlayers.org/).
+
 ## Hugo B.
 
 	http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.7153&rep=rep1&type=pdf  
