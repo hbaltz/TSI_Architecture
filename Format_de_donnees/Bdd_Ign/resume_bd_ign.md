@@ -12,10 +12,9 @@
 		</td>
 		<td><!-- Description -->
 			<ul>
-		    	<li>Description vectorielle 3D qui est strucuturée en objets</li>  
-		    	<li>Informations sur divers thèmes tels que la voirie, les bâtiments, les limites administratives pour des échelles allant du
-1 : 5 000 au 1 : 50 000</li>  
+		    	<li>Description vectorielle 3D qui est strucuturée en objets</li>
 			<li>Précision métrique</li>
+		    	<li>Echelles allant du 1 : 5 000 au 1 : 50 000</li>  
 			<li>Découpage départementale et par thème (Administratif (H), Bâti (E), Hydrographie (D), Orographie (G), Réseau routier (A), Toponyme (T), Transport énergie (C), Végétation (F), Voies ferrées et autres (B) et Zone d'activité (I))</li>
 			</ul>
 		</td>
