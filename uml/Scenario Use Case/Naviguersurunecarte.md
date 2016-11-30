@@ -1,8 +1,5 @@
-                                                                        |                                                                          | 
 |-----------------------------------------------------------------------------|--------------------------------------------------------------------------| 
-| Identification                                                                                                                                        |
-|-----------------------------------------------------------------------------|--------------------------------------------------------------------------| 
-| 
+| ~Identification~                                                                                                                                        | 
 | Cas d'utilisation                                                           | Naviguer sur une carte                                                   | 
 | Acteurs concernés                                                           | Utilisateur                                                              | 
 | Description succincte                                                       | "Déplacement dans tous les sens possibles ( translations)                | 
