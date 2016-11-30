@@ -6,23 +6,27 @@ La BDUni couvre la France métropolitaine, les DOM Mayotte, Saint-Pierre-et-Miqu
 
 ##Contenu de la BD UNI Grande Echelle:
 La BDUni regroupe les informations géographiques appartenant à 10 domaines : 
--le réseau routier, 
--les voies ferrées et autres moyens de transport terrestre,
--les réseaux de distribution, 
--le réseau hydrographique terrestre,
--le bâti,
--la végétation,
--l'orographie, 
--les zonages administratifs, 
--les zones d'activité ou d'intérêt,
--les adresses.
+le réseau routier, 
+les voies ferrées et autres moyens de transport terrestre,
+les réseaux de distribution, 
+le réseau hydrographique terrestre,
+le bâti,
+la végétation,
+l'orographie, 
+les zonages administratifs, 
+les zones d'activité ou d'intérêt,
+les adresses.
 
 
 ##Structure de la BD UNI:
 La structure de la BDUni se divise en trois tables attributaires, séparées pour des raisons de performances techniques :
+
 -Deux tables pour chaque classe d'objets :
+
   Table des objets actuels et des objets supprimés ;
+
   Table des anciennes versions des objets, ou table d'historique ;
+
 -Une table documentaire, pour tous les domaines, contenant les informations sur les mises à jour considérées par ensembles et appelées réconciliations :Table des réconciliations.
 
 ##Classes et qualité des domaines:
@@ -71,7 +75,7 @@ La structure de la BDUni se divise en trois tables attributaires, séparées pou
 				   </ul>
 				</li> 
 <li> la précision altimétrique en fonction de la source Z:
-				<li>
+				
 				   <ul>
 				    	<li>Plan coté: 2m </li>
 			  		<li>Fichier numérique: 2m</li>
@@ -164,8 +168,10 @@ La structure de la BDUni se divise en trois tables attributaires, séparées pou
 			</ul>
 		</td>
 		<td><!-- Qualité des données -->
+			<ul>
 		    	<li>précision planimétrique: 3m</li>      
 		    	<li>précision altimétrique: 1m</li> 
+ 			</ul>
 		</td>     
     </tr>
 <tr>
@@ -181,7 +187,9 @@ La structure de la BDUni se divise en trois tables attributaires, séparées pou
 			</ul>
 		</td>
 		<td><!-- Qualité des données -->
-		    	<li>précision planimétrique:10 à 25m</li>      
+			<ul>
+		    	<li>précision planimétrique:10 à 25m</li> 
+			</ul>     
 		</td>     
     </tr>
 <tr>
@@ -208,7 +216,9 @@ La structure de la BDUni se divise en trois tables attributaires, séparées pou
 			</ul>
 		</td>
 		<td><!-- Qualité des données -->
-		    	<li>la précision planimétrique dépend de la source</li>      
+			<ul>
+		    	<li>la précision planimétrique dépend de la source</li> 
+			</ul>     
 		</td>     
     </tr>
 <tr>
@@ -221,7 +231,9 @@ La structure de la BDUni se divise en trois tables attributaires, séparées pou
 			</ul>
 		</td>
 		<td><!-- Qualité des données -->
-		    	<li>précision varie avec le type du géocodage</li>      
+			<ul>
+		    	<li> la précision des adresses varie avec le type du géocodage</li>      
+			</ul>
 		</td>     
     </tr>
 </table>
