@@ -15,6 +15,7 @@
 		    	<li>Description vectorielle 3D qui est strucuturée en objets</li>
 			<li>Précision métrique</li>
 		    	<li>Echelles allant du 1 : 5 000 au 1 : 50 000</li>  
+			<li>Projections Lambert-93 (RGF 93) en métropole et Projection UTM (système légal) en outre-mer</li> 
 			<li>Découpage départementale et par thème (Administratif (H), Bâti (E), Hydrographie (D), Orographie (G), Réseau routier (A), Toponyme (T), Transport énergie (C), Végétation (F), Voies ferrées et autres (B) et Zone d'activité (I))</li>
 			</ul>
 		</td>
