@@ -1,5 +1,6 @@
-| Cas d'utilisation     | Naviguer sur une carte                                                      | 
+| Scenario |	|
 |-----------------------|-----------------------------------------------------------------------------|
+| Cas d'utilisation     | Naviguer sur une carte                                                      | 
 | Acteurs concernés     | Utilisateur                                                                 | 
 | Description succincte | "Déplacement dans tous les sens possibles ( translations)                   | 
 |                       | sur la carte selon les actions de l'utilisateur (drag and drop)"            | 
