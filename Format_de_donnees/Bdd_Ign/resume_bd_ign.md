@@ -17,6 +17,124 @@
 		    	<li>Echelles allant du 1 : 5 000 au 1 : 50 000</li>  
 			<li>Projections Lambert-93 (RGF 93) en métropole et UTM (système légal) en outre-mer</li> 
 			<li>Découpage départementale et par thème (Administratif (H), Bâti (E), Hydrographie (D), Orographie (G), Réseau routier (A), Toponyme (T), Transport énergie (C), Végétation (F), Voies ferrées et autres (B) et Zone d'activité (I))</li>
+			
+			<table>
+				<tr>
+					<th>Thèmes</th>
+					<th>Cocuhes</th>
+				</tr>
+				<tr>
+					<td>Réseau routier (A)</td>
+					<td>
+						<ul>
+							<li>TOPONYME_COMMUNICATION</li>
+							<li>SURFACE_ROUTE</li>
+							<li>ROUTE_SECONDAIRE</li>
+							<li>ROUTE_PRIMAIRE</li>
+							<li>ROUTE_NOMMEE</li>
+							<li>ROUTE</li>
+							<li>CHEMIN</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+				<tr>
+					<td>Voies ferrées et autres (B)</td>
+					<td>
+						<ul>
+							<li>TRANSPORT_CABLE</li>
+							<li>TOPONYME_FERRE</li>
+							<li>GARE</li>
+							<li>AIRE_TRIAGE</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Transport énergie (C)</td>
+					<td>
+						<ul>
+							<li>PYLONE</li>
+							<li>POSTE_TRANSFORMATION</li>
+							<li>LIGNE_ELECTRIQUE</li>
+							<li>CONDUITE</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Hydrographie (D)</td>
+					<td>
+						<ul>
+							<li>TRONCON_COURS_EAU</li>
+							<li>SURFACE_EAU</li>
+							<li>RESERVOIR_EAU</li>
+							<li>POINT_EAU</li>
+							<li>HYDRONYME</li>
+							<li>CANALISATION_EAU</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Bâti (E)</td>
+					<td>
+						<ul>
+							<li>TERRAIN_SPORT</li>
+							<li>RESERVOIR</li>
+							<li>PISTE_AERODROME</li>
+							<li>CONSTRUCTION_SURFACIQUE</li>
+							<li>CONSTRUCTION_PONCTUELLE</li>
+							<li>CONSTRUCTION_LINEARIE</li>
+							<li>CONSTRUCTION_LEGERE</li>
+							<li>CIMETIERE</li>
+							<li>BATI_REMARQUABLE</li>
+							<li>BATI_INDUSTRIEL</li>
+							<li>BATI_INDIFERENCIE</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Végétation (F)</td>
+					<td>
+						<ul>
+							<li>ZONE_VEGETATION</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Orographie (G)</td>
+					<td>
+						<ul>
+							<li>LIGNE_OROGRAPHIQUE</li>
+							<li>ORONYME</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Administratif (H)</td>
+					<td>
+						<ul>
+							<li>CHEF_LIEU</li>
+							<li>COMMUNE</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Zone d'activité (I)</td>
+					<td>
+						<ul>
+
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Toponyme (T)</td>
+					<td>
+						<ul>
+
+						</ul>
+					</td>
+				</tr>
+			</table>
+			
 			</ul>
 		</td>
     </tr>
