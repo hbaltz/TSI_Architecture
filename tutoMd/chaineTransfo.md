@@ -5,7 +5,6 @@
 Pensez à installer :
 - [Pandoc](http://pandoc.org/) ;
 - Texlive :
-
-	apt-get install texlive
+	apt-get install texlive  
 	apt-get install texlive-lang-french
 
