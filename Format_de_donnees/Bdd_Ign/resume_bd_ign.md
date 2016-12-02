@@ -121,7 +121,20 @@
 					<td>Zone d'activité (I)</td>
 					<td>
 						<ul>
-
+							<li>PAI_ADMINISTRATIF_MILITAIRE</li>
+							<li>PAI_CULTURE_LOISIRS</li>
+							<li>PAI_ESPACE_NATUREL</li>
+							<li>PAI_GESTION_EAUX</li>
+							<li>PAI_HYDROGRAPHIE</li>
+							<li>PAI_INDUSTRIEL_COMMERCIAL</li>
+							<li>PAI_OROGRAPHIE</li>
+							<li>PAI_RELIGIEUX</li>
+							<li>PAI_SANTE</li>
+							<li>PAI_SCIENCE_ENSEIGNEMENT</li>
+							<li>PAI_SPORT</li>
+							<li>PAI_TRANSPORT</li>
+							<li>PAI_ZONE_HABITATION</li>
+							<li>SURFACE_ACTIVITE</li>
 						</ul>
 					</td>
 				</tr>
@@ -129,7 +142,9 @@
 					<td>Toponyme (T)</td>
 					<td>
 						<ul>
-
+							<li>LIEU_DIT_HABITE</li>
+							<li>LIEU_DIT_NON_HABITE</li>
+							<li>TOPONYME_DIVERS</li>
 						</ul>
 					</td>
 				</tr>
