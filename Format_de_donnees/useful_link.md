@@ -19,7 +19,7 @@ Documentation du locigiel de modélisation 3D City Engine, d'ESRI. Cette partie 
 
 Posts à propos de la manière dont la 3D est générée dans Google Earth. 
 
-Tout d'abord au moyen du logiciel SketchUp 3D, qui permet de modéliser très en détail des bâtiments, les utilisateurs pouvaient recréer des bâtiments compatibles avec le format de Google Earth, et les y voir intégrer après validation par les équipes de Google. Ce mode de représentation, d'une grande précision, implique toutefois un travail manuel important qui ne peut raisonnablemennt pas être délpoyée à l'ensemble de la surface terrestre mais est resté cantonné à certains bâtiments ciblés.
+Tout d'abord au moyen du logiciel SketchUp 3D, qui permet de modéliser très en détail des bâtiments, les utilisateurs pouvaient recréer des bâtiments compatibles avec le format de Google Earth, et les y voir intégrer après validation par les équipes de Google. Ce mode de représentation, d'une grande précision, implique toutefois un travail manuel important qui ne peut raisonnablemennt pas être déployée à l'ensemble de la surface terrestre mais est resté cantonné à certains bâtiments ciblés.
 
 Pour gagner en efficacité et améliorer sa couverture 3D, Google s'est à partir de 2012 penché sur un mode automatisé de mise à jour du relief des zones bâties au moyen de la stéréophotogramétrie. Cette sous-discipline de la photogramétrie vise à recomposer le relief des bâtiments par triangulation, en comparant leurs surfaces sous différents angles de prise de vue aérienne. En 2016,  un total de 495 000 km2 est couvert en 3D par Google Earth.
 
