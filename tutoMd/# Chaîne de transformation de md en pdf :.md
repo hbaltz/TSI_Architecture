@@ -25,19 +25,6 @@ Pour ce faire, il suffit d'executer la commande
 
 ## Paramètres de la fonction :
 
-Pensez à écrire les fichiers ainsi : 
-00-metadata.yaml  
-"Id"-"Nom de la partie"-"N° de la sous-partie".md  
-
-Exemple:
-03-sequence-1.md  
-04-sequence-2.md  
-05-sequence-3.md   
-
-ou
-
-11-projet.md  
-
 ### Pour le rapport :
 ```
 	pandoc -N \ 
