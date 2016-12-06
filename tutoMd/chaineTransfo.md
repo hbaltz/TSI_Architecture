@@ -22,3 +22,41 @@ Si des images sont incluses dans le fichier .md, elles doivent être accessibles
 Pensez à installer :
 - [Pandoc](http://pandoc.org/) ;
 Pour ce faire, il suffit d'executer la commande 
+
+## Paramètres de la fonction :
+
+Pensez à écrire les fichiers ainsi : 
+00-metadata.yaml  
+"Id"-"Nom de la partie"-"N° de la sous-partie".md  
+
+Exemple:
+03-sequence-1.md  
+04-sequence-2.md  
+05-sequence-3.md   
+
+ou
+
+11-projet.md  
+
+### Pour le rapport :
+```
+	pandoc -N \ 
+	       --toc \ <-- Table of Contents
+	       --variable documentclass=article \
+	       --variable fontsize=12pt \
+	       --variable papersize=a4paper \
+	       --variable version=0.2.0 \
+	       --template="The template in .tex" \ 
+	       *.yaml *.md -o "Nom de la sortie.pdf"
+```
+
+### Pour la présentation
+```
+	pandoc --slide-level=2 \
+	       --variable theme=Dresden \
+	       --variable fontsize=11pt \
+	       --variable version=0.1.0 \
+	       --template="The template in .tex" \
+	       --to=beamer \
+	       *.yaml *.md -o "Nom de la sortie.pdf"
+```
