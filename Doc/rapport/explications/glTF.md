@@ -1,10 +1,8 @@
-
-
-<center>![glTF logo](/home/rudolf/Documents/GitHub/TSI_Architecture/Doc/rapport/glTF.png)</center>
+<center>![glTF logo](../images/glTF.png)</center>
 
 <p style="text-align:justify;">glTF™ 1.0 (GL Transmission Format) is a royalty-free specification for the efficient transmission and loading of 3D scenes and models by applications. glTF minimizes both the size of 3D assets, and the runtime processing needed to unpack and use those assets. glTF defines an extensible, common publishing format for 3D content tools and services that streamlines authoring workflows and enables interoperable use of content across the industry.</p>
 
-<center>![flux glTF](/home/rudolf/Documents/GitHub/TSI_Architecture/Doc/rapport/flux_glTF.png)</center>
+<center>![flux glTF](../images/flux_glTF.png)</center>
 
 ## Advantages :
 
