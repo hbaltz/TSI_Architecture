@@ -1,0 +1,194 @@
+
+\documentclass[
+  $if(fontsize)$
+  $fontsize$,
+  $endif$french, % $if(lang)$$lang$,$endif$
+  $if(papersize)$
+  $papersize$,
+  $endif$$for(classoption)$
+  $classoption$$sep$,$endfor$]{beamer}
+
+
+$if(theme)$\usetheme{$theme$}$endif$
+
+
+
+%
+% TYPESETTING FRENCH -- FONTS
+%
+$if(fontfamily)$
+  \usepackage{$fontfamily$}
+$else$
+  \usepackage{lmodern, textcomp}
+  % textcomp provides more mappings between utf8 chars and font chars
+$endif$
+
+$if(linestretch)$
+  \usepackage{setspace}
+  \setstretch{$linestretch$}
+$endif$
+
+% Additional symbols
+%\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+
+% Choose font according to driver
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \DeclareUnicodeCharacter{20AC}{\texteuro}
+  $if(euro)$
+    \usepackage{eurosym}
+    \let\texteuro\euro
+  $endif$
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+  $if(mainfont)$
+    \setmainfont{$mainfont$}
+  $endif$
+  $if(sansfont)$
+    \setsansfont{$sansfont$}
+  $endif$
+  $if(monofont)$
+    \setmonofont[Mapping=tex-ansi]{$monofont$}
+  $endif$
+  $if(mathfont)$
+    \setmathfont(Digits,Latin,Greek){$mathfont$}
+  $endif$
+\fi
+
+% Babel
+\ifxetex
+  \usepackage{polyglossia}
+  \setmainlanguage{french}
+\else
+  \usepackage[french]{babel}
+\fi
+
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+  \usepackage{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+
+
+
+
+
+%
+% LAYOUT
+%
+$if(geometry)$
+  \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$endif$
+
+% Hyperref
+\ifxetex
+  \hypersetup{setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex}
+\else
+  \hypersetup{unicode=true}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            $if(author)$pdfauthor={$for(author)$$author.name$$sep$, $endfor$},$endif$
+            $if(title)$ pdftitle={$title$},$endif$
+            colorlinks=true,
+            urlcolor=blue,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+
+% Page numbers
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber%
+}
+
+
+%
+% SPECIAL PAGES
+%
+% Tables
+
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=0.75\maxheight,keepaspectratio}
+
+$if(links-as-notes)$
+% Make links footnotes instead of hotlinks:
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+$endif$
+
+
+%
+% PARAGRAPH FORMATTING
+%
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}%
+  \setlength{\parskip}{0pt}%
+}
+
+
+%
+% DOCUMENT
+%
+$if(title)$
+\title{$title$}
+$endif$
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+$if(author)$
+\author{$for(author)$$author.name$$sep$ \and $endfor$}
+$endif$
+\institute[ENSG]{École nationale des sciences géographiques}
+\date{$date$}
+
+% 0 - header before document
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\begin{document}
+% 1 - title page
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% 3 - frontmatter
+$for(include-before)$
+$include-before$
+
+$endfor$
+
+% 5 - mainmatter
+$body$
+
+% 6 - backmatter
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}
