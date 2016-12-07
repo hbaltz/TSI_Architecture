@@ -12,7 +12,7 @@
 
 * Se placer dans le dossier contant les .md (slides)
 * Vérifier que pandoc/pandoc.sh est le droit d'exécution (chmod u+x)
-* Lancer '''./pandoc/pandoc.sh'''
+* Lancer ```./pandoc/pandoc.sh```
 * Le pdf sera créé dans le dossier parent ../
 
 ## Template :
