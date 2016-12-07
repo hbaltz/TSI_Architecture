@@ -1,15 +1,10 @@
 
 \documentclass[
-  $if(fontsize)$
-  $fontsize$,
-  $endif$french, % $if(lang)$$lang$,$endif$
-  $if(papersize)$
-  $papersize$,
-  $endif$$for(classoption)$
-  $classoption$$sep$,$endfor$]{beamer}
+$if(fontsize)$$fontsize$,$endif$
+french,                           % $if(lang)$$lang$,$endif$
+$if(papersize)$$papersize$,$endif$
+$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 
-
-$if(theme)$\usetheme{$theme$}$endif$
 
 
 
@@ -91,11 +86,11 @@ $endif$
 
 % Hyperref
 \ifxetex
-  \hypersetup{setpagesize=false, % page size defined by xetex
+  \usepackage[setpagesize=false, % page size defined by xetex
               unicode=false, % unicode breaks when used with xetex
-              xetex}
+              xetex]{hyperref}
 \else
-  \hypersetup{unicode=true}
+  \usepackage[unicode=true]{hyperref}
 \fi
 \hypersetup{breaklinks=true,
             bookmarks=true,
@@ -106,17 +101,20 @@ $endif$
             pdfborder={0 0 0}}
 \urlstyle{same}  % don't use monospace font for urls
 
+% Headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\lhead{$if(title)$$title$$endif$}
+\chead{}
+\rhead{\itshape{\nouppercase{\leftmark}}}
+\lfoot{$if(version)$v $version$$endif$}
+\cfoot{}
+\rfoot{\thepage}
 
 $if(highlighting-macros)$
 $highlighting-macros$
 $endif$
-
-
-% Page numbers
-\expandafter\def\expandafter\insertshorttitle\expandafter{%
-  \insertshorttitle\hfill%
-  \insertframenumber\,/\,\inserttotalframenumber%
-}
 
 
 %
@@ -124,6 +122,8 @@ $endif$
 %
 % Tables
 
+$if(nographics)$
+$else$
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -132,7 +132,8 @@ $endif$
 % Scale images if necessary, so that they will not overflow the page
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=0.75\maxheight,keepaspectratio}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+$endif$
 
 $if(links-as-notes)$
 % Make links footnotes instead of hotlinks:
@@ -143,24 +144,42 @@ $endif$
 %
 % PARAGRAPH FORMATTING
 %
-
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}%
   \setlength{\parskip}{0pt}%
 }
+$if(numbersections)$
+\setcounter{secnumdepth}{5}
+$else$
+\setcounter{secnumdepth}{0}
+$endif$
 
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+$if(verbatim-in-note)$
+\VerbatimFootnotes % allows verbatim text in footnotes
+$endif$
 
 %
 % DOCUMENT
 %
 $if(title)$
-\title{$title$}
+\title{$title$$if(subtitle)$\\\vspace{0.5em}{\large $subtitle$}$endif$}
 $endif$
-$if(subtitle)$
-\subtitle{$subtitle$}
+$if(author)$
+\author{$for(author)$$author.name$$sep$ \and $endfor$}
 $endif$
-
-\institute[ENSG]{École nationale des sciences géographiques}
 \date{$date$}
 
 % 0 - header before document
@@ -170,18 +189,45 @@ $endfor$
 
 \begin{document}
 % 1 - title page
+$if(title)$
+\maketitle
+$endif$
 
-\begin{frame}
-  \titlepage
-\end{frame}
+\bigskip
 
-% 3 - frontmatter
+\clearpage
+
+% 2 - abstract
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+% 3 - forematter
 $for(include-before)$
 $include-before$
 
 $endfor$
 
+% 4 - tables of content
+$if(toc)$
+{
+  \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
+  \setcounter{tocdepth}{$toc-depth$}
+  \tableofcontents
+}
+$endif$
+
+$if(lot)$
+\listoftables
+$endif$
+$if(lof)$
+\listoffigures
+$endif$
+
 % 5 - mainmatter
+\clearpage
 $body$
 
 % 6 - backmatter
