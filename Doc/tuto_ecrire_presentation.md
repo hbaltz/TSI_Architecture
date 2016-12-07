@@ -2,10 +2,10 @@
 
 ## Régles :
 
-* Respecter la strucuture présente dans exemple/rapport/ : "n°"_"Nom du doc".md
+* Respecter la structure présente dans exemple/rapport/ : "n°"_"Nom du doc".md
 	*   Commencer une partie par un titre de niveau 1 (souligner par des =====)
 	*   Tout les .md doivent contenir un titre de niveau 2
-	*   Lorsque qu'un paragraphe(titre de niveau 1) posséde plusieurs parties (titre de niveau 2) séparés els titres de niveau 2 : ainsi "n°"_paragrahe-"n° de la partie".md 
+	*   Lorsque qu'un paragraphe (titre de niveau 1) possède plusieurs parties (titre de niveau 2), séparez les titres de niveau 2 ainsi : "n°"_paragrahe-"n° de la partie".md 
 	*   Finir le document en sautant une ligne
 
 ## Création du pdf :
