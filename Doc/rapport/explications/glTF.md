@@ -1,10 +1,12 @@
+# glTf
+
 <center>![glTF logo](../images/glTF.png)</center>
 
 <p style="text-align:justify;">glTF™ 1.0 (GL Transmission Format) is a royalty-free specification for the efficient transmission and loading of 3D scenes and models by applications. glTF minimizes both the size of 3D assets, and the runtime processing needed to unpack and use those assets. glTF defines an extensible, common publishing format for 3D content tools and services that streamlines authoring workflows and enables interoperable use of content across the industry.</p>
 
 <center>![flux glTF](../images/flux_glTF.png)</center>
 
-## Advantages :
+## Advantages
 
 * glTF bridges the gap between 3D content creation tools and modern GL applications by providing an efficient, extensible, interoperable format for the transmission and loading of 3D content.
 * glTF provides a vendor- and runtime-neutral format that can be loaded and rendered with minimal processing.
@@ -16,7 +18,7 @@
 * glTF defines a mechanism that allows the addition of both general-purpose and vendor-specific extensions.
 * glTF is already used by Oslandia.
 
-## Warning :
+## Warning
 
 * glTF is not a streaming format.
 * glTF is not intended to be human-readable.
