@@ -1,35 +1,129 @@
-# TSI_Architecture
+# Project tree
 
-## Format_de_donnees 
-	**Bdd_Ign**
-		resume_bd_ign.md
-	**Format_3d**
-		collada.md
-		doc_sol_3d.md
-		Format_fichier.ods
-		GlTF.md
-	**OSM**
-		OSM&Cesim.md
-		OSM_Data.md
-	useful_link.md
+.
+ * [README.md](./README.md)
+ * [readme.txt](./readme.txt)
+ * [Doc](./Doc)
+   * [presentation](./Doc/presentation)
+     * [slides](./Doc/presentation/slides)
+     * [00-metadata.yaml](./Doc/presentation/slides/00-metadata.yaml)
+     * [pandoc](./Doc/presentation/slides/pandoc)
+     * [pandoc.sh](./Doc/presentation/slides/pandoc/pandoc.sh)
+     * [template.tex](./Doc/presentation/slides/pandoc/template.tex)
+   * [exemple](./Doc/exemple)
+     * [presentation](./Doc/exemple/presentation)
+       * [images](./Doc/exemple/presentation/images)
+         * [images.jpeg](./Doc/exemple/presentation/images/images.jpeg)
+         * [lorem-ipsum-logo.jpg](./Doc/exemple/presentation/images/lorem-ipsum-logo.jpg)
+         * [What-is-Lorem-ipsum.jpg](./Doc/exemple/presentation/images/What-is-Lorem-ipsum.jpg)
+       * [presentation.pdf](./Doc/exemple/presentation/presentation.pdf)
+       * [slides](./Doc/exemple/presentation/slides)
+       * [00-metadata.yaml](./Doc/exemple/presentation/slides/00-metadata.yaml)
+       * [01-contexte.md](./Doc/exemple/presentation/slides/01-contexte.md)
+       * [02-image.md](./Doc/exemple/presentation/slides/02-image.md)
+       * [03-image2-1.md](./Doc/exemple/presentation/slides/03-image2-1.md)
+       * [04-image2-2.md](./Doc/exemple/presentation/slides/04-image2-2.md)
+       * [05-ccl.md](./Doc/exemple/presentation/slides/05-ccl.md)
+       * [06-merci.md](./Doc/exemple/presentation/slides/06-merci.md)
+       * [pandoc](./Doc/exemple/presentation/slides/pandoc)
+       * [pandoc.sh](./Doc/exemple/presentation/slides/pandoc/pandoc.sh)
+       * [template.tex](./Doc/exemple/presentation/slides/pandoc/template.tex)
+     * [rapport](./Doc/exemple/rapport)
+     * [explications](./Doc/exemple/rapport/explications)
+       * [00-metadata.yaml](./Doc/exemple/rapport/explications/00-metadata.yaml)
+       * [01_introduction.md](./Doc/exemple/rapport/explications/01_introduction.md)
+       * [02_image.md](./Doc/exemple/rapport/explications/02_image.md)
+       * [03_conclusion.md](./Doc/exemple/rapport/explications/03_conclusion.md)
+       * [pandoc](./Doc/exemple/rapport/explications/pandoc)
+       * [pandoc.sh](./Doc/exemple/rapport/explications/pandoc/pandoc.sh)
+       * [template.tex](./Doc/exemple/rapport/explications/pandoc/template.tex)
+     * [images](./Doc/exemple/rapport/images)
+       * [lorem-ipsum-logo.jpg](./Doc/exemple/rapport/images/lorem-ipsum-logo.jpg)
+     * [rapport.pdf](./Doc/exemple/rapport/rapport.pdf)
+   * [rapport](./Doc/rapport)
+     * [explications](./Doc/rapport/explications)
+     * [00-metadata.yaml](./Doc/rapport/explications/00-metadata.yaml)
+     * [pandoc](./Doc/rapport/explications/pandoc)
+     * [pandoc.sh](./Doc/rapport/explications/pandoc/pandoc.sh)
+     * [template.tex](./Doc/rapport/explications/pandoc/template.tex)
+   * [tuto_ecrire_presentation.md](./Doc/tuto_ecrire_presentation.md)
+   * [tuto_ecrire_rapport.md](./Doc/tuto_ecrire_rapport.md)
+ * [tree.sh](./tree.sh)
+ * [Outils](./Outils)
+   * [tutoMd](./Outils/tutoMd)
+   * [chaineTransfo.md](./Outils/tutoMd/chaineTransfo.md)
+ * [State of Art](./State of Art)
+   * [TuilesVect3D](./State of Art/TuilesVect3D)
+     * [Principes](./State of Art/TuilesVect3D/Principes)
+       * [3DTiles_summary.md](./State of Art/TuilesVect3D/Principes/3DTiles_summary.md)
+       * [Principes Tuiles & WMTS.md](./State of Art/TuilesVect3D/Principes/Principes Tuiles & WMTS.md)
+       * [3D_tiles_vector_use.md](./State of Art/TuilesVect3D/Principes/3D_tiles_vector_use.md)
+       * [creation_donnes_3D.md](./State of Art/TuilesVect3D/Principes/creation_donnes_3D.md)
+       * [images](./State of Art/TuilesVect3D/Principes/images)
+       * [pyramidage.png](./State of Art/TuilesVect3D/Principes/images/pyramidage.png)
+       * [tilematrix.png](./State of Art/TuilesVect3D/Principes/images/tilematrix.png)
+       * [lod-types.jpg](./State of Art/TuilesVect3D/Principes/images/lod-types.jpg)
+     * [README.md](./State of Art/TuilesVect3D/README.md)
+     * [Solutions_existantes](./State of Art/TuilesVect3D/Solutions_existantes)
+     * [Bibliotheque_3D.md](./State of Art/TuilesVect3D/Solutions_existantes/Bibliotheque_3D.md)
+     * [bibliothèques pour 3d vector tiles.md](./State of Art/TuilesVect3D/Solutions_existantes/bibliothèques pour 3d vector tiles.md)
+     * [Tuile 3D, solutions ArcGIS.md](./State of Art/TuilesVect3D/Solutions_existantes/Tuile 3D, solutions ArcGIS.md)
+     * [Py3DTiles&LOPoCs.md](./State of Art/TuilesVect3D/Solutions_existantes/Py3DTiles&LOPoCs.md)
+     * [Librairies3D](./State of Art/TuilesVect3D/Solutions_existantes/Librairies3D)
+   * [Format_de_donnees](./State of Art/Format_de_donnees)
+     * [OSM](./State of Art/Format_de_donnees/OSM)
+       * [description_donnees_OSM.md](./State of Art/Format_de_donnees/OSM/description_donnees_OSM.md)
+       * [OSM&Cesium.md](./State of Art/Format_de_donnees/OSM/OSM&Cesium.md)
+       * [OSM_Data.md](./State of Art/Format_de_donnees/OSM/OSM_Data.md)
+     * [Bdd_Ign](./State of Art/Format_de_donnees/Bdd_Ign)
+       * [bduni.md](./State of Art/Format_de_donnees/Bdd_Ign/bduni.md)
+       * [resume_bd_ign.md](./State of Art/Format_de_donnees/Bdd_Ign/resume_bd_ign.md)
+     * [useful_link.md](./State of Art/Format_de_donnees/useful_link.md)
+     * [Format_3d](./State of Art/Format_de_donnees/Format_3d)
+     * [collada.md](./State of Art/Format_de_donnees/Format_3d/collada.md)
+     * [doc_sol_3D.md](./State of Art/Format_de_donnees/Format_3d/doc_sol_3D.md)
+     * [GlTF.md](./State of Art/Format_de_donnees/Format_3d/GlTF.md)
+     * [3dtiles.md](./State of Art/Format_de_donnees/Format_3d/3dtiles.md)
+     * [Format_fichier.md](./State of Art/Format_de_donnees/Format_3d/Format_fichier.md)
+   * [Modelisation](./State of Art/Modelisation)
+     * [Mockup3dTiles.png](./State of Art/Modelisation/Mockup3dTiles.png)
+     * [README.md](./State of Art/Modelisation/README.md)
+     * [uml](./State of Art/Modelisation/uml)
+       * [diagrammes.mdj](./State of Art/Modelisation/uml/diagrammes.mdj)
+       * [png](./State of Art/Modelisation/uml/png)
+         * [Model1__UseCaseDiagram_0.png](./State of Art/Modelisation/uml/png/Model1__UseCaseDiagram_0.png)
+         * [Model1__UseCaseDiagramComplet_4.png](./State of Art/Modelisation/uml/png/Model1__UseCaseDiagramComplet_4.png)
+         * [Model1__UseCaseDiagramModifierBati3D_3.png](./State of Art/Modelisation/uml/png/Model1__UseCaseDiagramModifierBati3D_3.png)
+         * [Model1__UseCaseDiagramSeDeplacer_1.png](./State of Art/Modelisation/uml/png/Model1__UseCaseDiagramSeDeplacer_1.png)
+         * [Model1__UseCaseDiagramVoirBati3D_2.png](./State of Art/Modelisation/uml/png/Model1__UseCaseDiagramVoirBati3D_2.png)
+       * [Scenario Use Case](./State of Art/Modelisation/uml/Scenario Use Case)
+       * [Naviguersurunecarte.md](./State of Art/Modelisation/uml/Scenario Use Case/Naviguersurunecarte.md)
+       * [Sedeplaceren3d.md](./State of Art/Modelisation/uml/Scenario Use Case/Sedeplaceren3d.md)
+     * [Chaine_production.png](./State of Art/Modelisation/Chaine_production.png)
+     * [esquisse.mdj](./State of Art/Modelisation/esquisse.mdj)
+   * [Flux](./State of Art/Flux)
+     * [Building server.odt](./State of Art/Flux/Building server.odt)
+     * [Building server.pdf](./State of Art/Flux/Building server.pdf)
+     * [Differents_flux.ods](./State of Art/Flux/Differents_flux.ods)
+     * [Differents_flux.pdf](./State of Art/Flux/Differents_flux.pdf)
+     * [glTF_argumentaire.odt](./State of Art/Flux/glTF_argumentaire.odt)
+     * [WMTS_argumentaire.odt](./State of Art/Flux/WMTS_argumentaire.odt)
+     * [WMTS_argumentaire.pdf](./State of Art/Flux/WMTS_argumentaire.pdf)
+     * [glTF_argumentaire.pdf](./State of Art/Flux/glTF_argumentaire.pdf)
+   * [Itowns](./State of Art/Itowns)
+   * [README.md](./State of Art/Itowns/README.md)
+   * [ITowns.md](./State of Art/Itowns/ITowns.md)
+ * [archi.txt](./archi.txt)
 
-## Itowns 
-	ITowns.odt ( à convertir)
-	README.md
-## TuilesVect3D 
-	**Principes**
-		3DTiles_summary.md
-		3D_tiles_vector_use.md
-		creation_donnees_3D.md
-		lod-types.jpg
-		Principes Tuiles & WMTS.md
-		pyramidage.png
-		tilematrix.png	
-	**Solutions_existantes**
-		Bibliotheque_3D.md
-		bibliothèques pour 3d vector tiles.md
-		Librairies3D
-		Librairies 3D.odt
-		Py3DTiles&LOPoCs.md
-		Tuile 3D, solutions ArcGIS.md
-	README.md
+ **Attention**
+
+ La licence d'enseignement et la licence de recherche n'autorisent pas un
+ usage des données dans le cadre d'activités de prestations de services, y
+ compris en matière de formation continue, ni d'activités éditoriales de
+ supports pédagogiques (livres, CD, DVD) distribués par les réseaux
+ traditionnels de vente, ni de diffusion de contenus pédagogiques par des
+ sites ouverts et accessibles à tout public. Les organismes, bénéficiaires ou
+ non d'une licence d'enseignement et/ou de recherche, qui souhaitent couvrir
+ de tels usages pourront acquérir une licence d'exploitation des données de l'IGN.
+
+ http://professionnels.ign.fr/enseignement-recherche
