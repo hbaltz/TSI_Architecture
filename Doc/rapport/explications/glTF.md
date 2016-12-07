@@ -1,4 +1,7 @@
-![](/home/rudolf/Documents/GitHub/TSI_Architecture/Doc/rapport/GLTF.png) 
+glTf
+====
+
+![Logo glTF](../images/GLTF.png "Logo glTF") 
 
 * glTF bridges the gap between 3D content creation tools and modern GL applications by providing an efficient, extensible, interoperable format for the transmission and loading of 3D content.
 * glTF provides a vendor- and runtime-neutral format that can be loaded and rendered with minimal processing.
