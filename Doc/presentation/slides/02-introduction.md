@@ -1,7 +1,6 @@
-Introduction
-============
+# Introduction
 
-### Brainware
+## Brainware
 ![img](../images/kartun-chatting-facebook.jpg)
 
 ### Method Scrum  

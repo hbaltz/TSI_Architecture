@@ -1,7 +1,4 @@
-Introduction
-============
-
-### Personal report
+## Personal report
 - Scrum master and part of a big team
 - Tools
 - 3D world
