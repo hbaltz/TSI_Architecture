@@ -81,3 +81,5 @@ The response to the request is a 3dtiles format which contains a gltf file that 
 
 The cache contains a copy of the original data when it is expensive to retrieve compared to cache access time. Once some 3d vector tiles are stored in the cache, the client can access them directly through the cache rather than retrieving them by requests, which reduces the access time.
 
+At this moment, the user can visualize the 3d tiles fluently with the desired level of detail due to cache system.
+
