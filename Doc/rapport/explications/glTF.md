@@ -8,7 +8,7 @@
 
 > Taken from [AnalyticalGraphicsInc/3d-tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles)
 
-## What is the relationship between glTF and 3D Tiles?
+## What is the relationship between glTF and 3D Tiles ?
 
 <p style="text-align:justify;">[glTF](https://www.khronos.org/gltf), the runtime asset format for WebGL, is an open standard for 3D models from Khronos (the same group that does WebGL and COLLADA). Cesium uses glTF as its 3D model format, and the Cesium team contributes heavily to the glTF spec and open-source COLLADA2GLTF converter. The use of glTF is recommended in Cesium for individual assets, e.g., an aircraft, a character, or a **3D building**.
 <br/>
