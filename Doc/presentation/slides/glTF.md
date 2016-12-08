@@ -1,4 +1,4 @@
-# glTF *GL Transmission Format*
+## glTF *GL Transmission Format*
 #### Used by 3DTiles
 
 <center>![flux glTF](../images/flux_glTF.png)</center>
