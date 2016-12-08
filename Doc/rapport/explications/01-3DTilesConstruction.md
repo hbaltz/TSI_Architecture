@@ -43,14 +43,12 @@ Among the possibilities, **Batched 3D Models** is the best way to describe a bui
 
 > Note inclure texte de Samuel
 
-### How to actually create  a BDTopo building into a 3D Tile building
-
-> **TODO** changer titre
+### Preliminary steps on BDTOPO data
 
 In this part, we describe the necessary steps to build a 3D Tile object. First, some preliminary work has to be done to present the data in a usable format. The goal is to be able to automate as mush as possible the process.
 
 #### Input Data : BDTopo
-
+How to actually create a BDTopo building into a 3D Tile building
 BDTopo is a Shapefiles group with roads, energy network, hydrography, constructions, vegetation, etc...
 
 A PostGIS database is created with all the building shapes into a unique table. Then, we can make build a set of SQL request to transform the IGN data into almost ready to use 3DTile data. For instance, a bounding box enclosing the object, coordinates in degrees, etc.
@@ -61,11 +59,52 @@ We simplified the geometry because the 4th dimension have no use for 3D Tiles, a
 
 #### Importation into a PostGIS DB
 
-Importation directly with psql is better way. This is a tool named "shp2psql", which allow this using command line interface.
+The best way to import the shapefiles into the postgresql database is "shp2psql", which is in the *postgis* package.
 ```
-shp2pgsql -S -s 2154 -W "LATIN1" -a file.shp schema.table | psql -d data_base -h host -U user
+shp2pgsql -S -s {SRID} -W "{encoding}" -a file.shp schema.table |
+psql -d data_base -h host -U user
 ```
-Parameters are :
+
+The created table for *bati* is :
+```
+CREATE TABLE topo_bati
+(
+  gid serial NOT NULL,
+  id character varying(24),
+  geom geometry(PolygonZ,2154),
+  prec_plani double precision,
+  prec_alti double precision,
+  origin_bat character varying(8),
+  nature character varying(255) DEFAULT NULL,
+  hauteur smallint,
+  z_min double precision,
+  z_max double precision,
+  CONSTRAINT topo_bati_pkey PRIMARY KEY (gid)
+)
+```
+
+### From a transformed BDTOPO to a set of 3DTiles
+
+A 3DTile has one description file (in **json** format) and an object file (as a **B3DM** binary file).
+The *json* file tells the viewer where to display an object (geolocation), and when to display it (linked to a distance and a point of view). In addition, a **tileset.json** provides an overall description of all the 3D Tiles.
+
+The transformed **BDTOPO** is ready to produce the following informations :
+
+* the bounding box of each entity,
+* the entity geometry,
+* the entity placement with its bounding box.
+
+**The bounding box**
+An object's bounding box is built with *ST_Envelope(geom)*. It must be in degrees system coordinates, so we have to transform the geometry into the target SRID.
+
+**The entity**
+We need the geometry in metric system, that is simple with data expressed in *Lambert 93*. A transformation matrix will provide the relative positioning of the geometry inside this bounding box.
+
+**The result format**
+This illustration shows the available data (from the subset of "E_BATI")
+![The table bati in database](../images/Topo_Bati_1.png)
+
+![The table bati in database](../images/Topo_Bati_2.png)
 
 ### From a transformed BDTOPO to a set of 3DTiles
 
@@ -73,6 +112,7 @@ A 3DTile has one description file (in **json** format) and an object file (as a 
 The *json* file tells the viewer where to display an object (geolocation), and when to display it (linked to a distance and a point of view). In addition, a **tileset.json** provides an overall description of all the 3D Tiles.
 
 In this part, we match the mandatory fields of a 3D Tileset to their BD Topo counterparts.
+
 
 #### Tile metadata (json)
 
@@ -139,9 +179,11 @@ In **content**, we can add metadata like the origin of the building data or the 
 
 #### The actual object (B3DM)
 
+
+
 #### Tileset.json
 
-The top-level object is basically a "supertile" encompassing all the other tiles.  It has four properties: asset, properties, geometricError, and root.
+The top-level object is basically a "super tile" encompassing all the other tiles.  It has four properties: asset, properties, geometricError, and root.
 
 ```
   "asset" : {

@@ -19,7 +19,7 @@ z = z_maximal – hauteur
 > Extract of a “Bâti” layer from the  BDTopo in the Allier department
 
 ####Step 5:
-Create a geographic BDD (geodatabse) thanks to PostGIS (in QGIS) which contains the attributes needed to create 3D Tiles building.
+Create a geographic DB (geodatabase) thanks to PostGIS (in qGIS) which contains the attributes needed to create 3D Tiles building.
 2 attributes for each 3D building: 
 * ID (SERIAL PRIMARY KEY)
 * GEOMETRY (POLYHERALSURFACEZ)     Note: description of the geometry thanks to four coordinates (x,y,z) 
