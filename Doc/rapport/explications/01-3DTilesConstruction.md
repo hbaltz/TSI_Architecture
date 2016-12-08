@@ -39,15 +39,34 @@ In summary, one tile description includes:
 
 Among the possibilities, **Batched 3D Models** is the best way to describe a building. This format is described in annex : [Description of B3DM](../Annexes/b3dm.md).
 
-### How (hierarchy and optimization) ?
 
-> Note inclure texte de Samuel
+### Data hierarchization following the Bounding Volume Hierarchy method
+
+#### Interest of the method:
+
+The main interest of using a Bounding Volume Hierarchy (BVH) in our workflow lays in the fastening of the geometric processing it allows. Indeed, it is essential that in an interactive web-mapping application, the graphic calculation times are reduced as much as possible, to make its using smoother. Mapping whole cities with their buildings, in 3D, implies complex et heavy data. This data shouldn't be displayed all at once for some obvious reasons of speed and memory performance.
+
+Organizing data with a BVH tree, will rationalize the display, for each level of camera, by prioritizing the data to render. It also gives more cohesiveness to the information. For example, a small-scale point of view (with a weak zoom level) doesn't need to display small and minor geographic objects that would be barely visible and would overload the scene. Some objects also need to get their representation changed as the level of zoom changes too, to stay readable. If we zoom out, a building needs to get its shape generalized, meaning with less details and simplified shapes as the details wouldn't be visible anymore, and to lighten the data as more and more buildings are meant to be displayed as the view enlarges. Sometimes, some geographical objects could even need to be aggregated. The tree structure is, moreover, a far more efficient data organization. That makes each leaf of the tree (individual objects) or intermediate node (group of object) easily reachable via a database request. The complete dataset doesn't need to be read completely, as the right part of the tree can quickly be targeted.
+
+![](../images/fig03-bvh.png)
+
+#### Integration in the workflow
+
+Our workflow follows the processes used by Oslandia, described in this article:
+[http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/IV-2-W1/201/2016/isprs-annals-IV-2-W1-201-2016.pdf](http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/IV-2-W1/201/2016/isprs-annals-IV-2-W1-201-2016.pdf)
+
+When constructing the 3DTiles dataset, the tiles are linked with the hierarchy. On important thing to care about is the weight of each layer of hierarchy, that must be balanced in comparison with each other. The hierarchic level of each entity in the tree is determined according to its "weight". This weight, can recover multiple definitions depending on programmer choices, mostly in anticipation of who will visualize the data, and for what usage. By default, and without any further information of a possible professional usage, the biggest buildings are generally sent to the higher layers of the hierarchy. But the discretization could also be made according to certain building attributes for example.
+
+In few words: a "weight formula" must have been decided before, to calculate the weight of each element, and assign him a level in the tree. Then, starting from our 3D Tiles database, the idea is to capture the bounding box enclosing the very first level of spatial elements (the most important ones), that will form the root of the tree. After, the tile has to be divided in 4 parts, that will generate the 4 first nodes. In each one of this nodes are assigned the bounding boxes of the entities belonging to the following rank to display. Finally, the parent bounding box (of the the superior level) is extended, so that it can contain the whole of the child bounding boxes. And the display hierarchy is made that way, once the parent bounding box is penetrated, the child bounding boxes start to be displayed. And so on, recursively.
+
+The output must be a 3DTiles database, organized following this structure, ready to be hosted on a server.
 
 ### Preliminary steps on BDTOPO data
 
 In this part, we describe the necessary steps to build a 3D Tile object. First, some preliminary work has to be done to present the data in a usable format. The goal is to be able to automate as mush as possible the process.
 
 #### Input Data : BDTopo
+
 How to actually create a BDTopo building into a 3D Tile building
 BDTopo is a Shapefiles group with roads, energy network, hydrography, constructions, vegetation, etc...
 
@@ -96,6 +115,9 @@ The transformed **BDTOPO** is ready to produce the following informations :
 
 **The bounding box**
 An object's bounding box is built with *ST_Envelope(geom)*. It must be in degrees system coordinates, so we have to transform the geometry into the target SRID.
+
+The simplest is to build one bounding box per object as shown in the following illustration.
+![Bounding boxes](../images/BDTopo_BB_Rendu.png)
 
 **The entity**
 We need the geometry in metric system, that is simple with data expressed in *Lambert 93*. A transformation matrix will provide the relative positioning of the geometry inside this bounding box.
@@ -179,7 +201,9 @@ In **content**, we can add metadata like the origin of the building data or the 
 
 #### The actual object (B3DM)
 
-
+Each B3DM file has a very similar header (**version**, **magic number**...) in addition to the length of the encoded data describing the object, which is in **glTF** format.
+Basically, one has to use the geometry (which describe a flat polygon) and the height of the building to generate a set of vertex points and normal vectors.
+Since glTF is a well established format it should be relatively easy to adapt an existing library with the BDTOPO inputs.
 
 #### Tileset.json
 
