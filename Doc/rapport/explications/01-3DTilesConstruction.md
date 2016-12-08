@@ -63,24 +63,50 @@ We simplified the geometry because the 4th dimension have no use for 3D Tiles, a
 
 The best way to import the shapefiles into the postgresql database is using a tool named "shp2psql", which is in the *postgis* package.
 ```
-shp2pgsql -S -s {SRID} -W "{encoding}" -a file.shp schema.table | psql -d data_base -h host -U user
+shp2pgsql -S -s {SRID} -W "{encoding}" -a file.shp schema.table | 
+psql -d data_base -h host -U user
 ```
 
-**Parameters for shp2pgsql are :**
-
-* S : generate simple geometries instead of MULTI geometries.
-* s {SRID} : specify the SRID
-* W {encoding} : encoding The character encoding of Shape's attribute column. (default : "UTF-8")
-* c : create a new table and populates it
-* a : appends a shapefile into an existing table
-
-**Parameters for psql are :**
-
-* d : database's name
-* h : hostname
-* U : username
+The created table for *bati* is : 
+```
+CREATE TABLE topo_bati
+(
+  gid serial NOT NULL,
+  id character varying(24),
+  geom geometry(PolygonZ,2154),
+  prec_plani double precision,
+  prec_alti double precision,
+  origin_bat character varying(8),
+  nature character varying(255) DEFAULT NULL,
+  hauteur smallint,
+  z_min double precision,
+  z_max double precision,
+  CONSTRAINT topo_bati_pkey PRIMARY KEY (gid)
+)
+```
 
 #### Prepare the data
+
+Now we have all the *bati* into the database, but we need some informations more, like 
+
+* the bounding box of each entity,
+* the entity geometry,
+* the entity placement with its bounding box.
+
+**The bounding box**
+To generate an object's bounding box, we can make it with : *ST_Envelope(geom)*. It must be in degrees system coordinates, so we have to transform the geometry into the target SRID.
+We need the x min & y min of it.
+
+**The entity**
+We need the geometry in metric system, that is simple with data into *Lambert 93*.
+It is necessary to know the distance between this object and its bounding box in meters, this is the reason of bounding box (x min, y min).
+
+**The result format**
+
+The illustration shows all the data available (from the subset of "E_BATI")
+![The table bati in database](../images/Topo_Bati_1.png)
+
+![The table bati in database](../images/Topo_Bati_2.png)
 
 #### Filling a 3DTile
 
