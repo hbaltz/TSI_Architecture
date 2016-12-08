@@ -35,9 +35,9 @@ git checkout 3d-tiles
 npm install
 ```
 
-* Lancer le build :
+* Lancer le release :
 ```
-npm run build
+npm run release
 ```
 
 * Lancer le server :
