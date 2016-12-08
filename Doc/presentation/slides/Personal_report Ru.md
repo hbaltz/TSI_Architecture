@@ -1,4 +1,6 @@
-### Personal report from Rudolf
+# Personal report
 
-* Redécouverte de Cesium & Node js
-* Découverte des flux (WMTS) et des transferts de fichiers (gltf, b3dm...) + library like OpenLayers
+* Rediscovery of **Cesium** & Node js
+* Discovery of streams (WMTS) and **file transfers** (gltf, b3dm ...) + library js like OpenLayers
+* Knowledge about **Markdown**
+* Curious and Analytical mind
