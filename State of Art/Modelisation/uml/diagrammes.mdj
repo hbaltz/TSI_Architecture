@@ -33,7 +33,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFYqyQ7ZMUT9/w="
 									},
-									"name": "\"Système\"",
+									"name": "\"System\"",
 									"ownedElements": [
 										{
 											"_type": "UMLAssociation",
@@ -134,11 +134,10 @@
 											"_parent": {
 												"$ref": "AAAAAAFYqysdqMW/fKw="
 											},
-											"name": "BDD",
+											"name": "DB",
 											"visibility": "package",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -157,7 +156,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFYqyQ7ZMUT9/w="
 									},
-									"name": "Se déplacer en 3D",
+									"name": "Move in 3D",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -193,7 +192,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFYqyQ7ZMUT9/w="
 									},
-									"name": "Voir bâtiment en 3D",
+									"name": "See buildings in 3D",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -205,7 +204,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFYqyQ7ZMUT9/w="
 									},
-									"name": "Modifier des bâtiments",
+									"name": "Modify the 3D buildings",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -220,7 +219,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYqyP0g8UMm+g="
 							},
-							"name": "Utilisateur",
+							"name": "User",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -504,7 +503,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYqyP0g8UMm+g="
 							},
-							"name": "Technicien",
+							"name": "Technician",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -892,7 +891,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Utilisateur",
+											"text": "User",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -1180,7 +1179,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Technicien",
+											"text": "Technician",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -1468,7 +1467,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "\"Système\"",
+											"text": "\"System\"",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -1586,7 +1585,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "~BDD",
+											"text": "~DB",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -1787,7 +1786,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Naviguer sur une carte",
+											"text": "Navigate on a map",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -2102,7 +2101,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Se déplacer en 3D",
+											"text": "Move in 3D",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -2417,7 +2416,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Zoomer Dézoomer",
+											"text": "Zoom on a map",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -2732,7 +2731,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Voir bâtiment en 3D",
+											"text": "See buildings in 3D",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -3047,7 +3046,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier des bâtiments",
+											"text": "Modify the 3D buildings",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -6259,7 +6258,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYqz+rqtviybE="
 							},
-							"name": "Utilisateur",
+							"name": "User",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -6450,7 +6449,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Utilisateur",
+											"text": "User",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -6738,7 +6737,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Se déplacer en 3D",
+											"text": "Move in 3D",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -7468,13 +7467,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 650.5,
+											"left": 653,
 											"top": 250,
-											"width": 132,
+											"width": 143,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Se translater",
+											"text": "Move on the axis X Y Z",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -7540,9 +7539,9 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 645.5,
+									"left": 648,
 									"top": 243,
-									"width": 142,
+									"width": 154,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -7690,7 +7689,7 @@
 							"containerExtending": false,
 							"left": 616,
 							"top": 224,
-							"width": 201,
+							"width": 217,
 							"height": 64,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -7783,13 +7782,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 651.5,
+											"left": 661.5,
 											"top": 370,
-											"width": 136,
+											"width": 183,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Effectuer une rotation",
+											"text": "Rotate arotund the axis X Y Z",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -7855,9 +7854,9 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 646.5,
+									"left": 656.5,
 									"top": 363,
-									"width": 147,
+									"width": 194,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -8005,7 +8004,7 @@
 							"containerExtending": false,
 							"left": 616,
 							"top": 344,
-							"width": 207,
+							"width": 274,
 							"height": 64,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -8168,7 +8167,7 @@
 								"$ref": "AAAAAAFYq0BNad0UI5E="
 							},
 							"lineStyle": 1,
-							"points": "615:272;520:288",
+							"points": "615:273;520:288",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -8211,7 +8210,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 564,
-									"top": 354,
+									"top": 351,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -8245,7 +8244,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 535,
-									"top": 369,
+									"top": 366,
 									"width": 53,
 									"height": 13,
 									"autoResize": false,
@@ -8280,7 +8279,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 569,
-									"top": 325,
+									"top": 322,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -8312,7 +8311,7 @@
 								"$ref": "AAAAAAFYq0B5Id1glJw="
 							},
 							"lineStyle": 1,
-							"points": "615:355;520:338",
+							"points": "615:351;520:335",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -8427,7 +8426,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYq0HtWt+d/7Q="
 							},
-							"name": "Utilisateur",
+							"name": "User",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -8550,7 +8549,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Utilisateur",
+											"text": "User",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -8838,7 +8837,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Voir des bâtiments en 3D",
+											"text": "Observe buildings in 3D",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -9153,7 +9152,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Prendre en compte le niveau de détails",
+											"text": "Take the Level of Detail into account",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -10154,7 +10153,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYq0NzleHpifA="
 							},
-							"name": "Technicien",
+							"name": "Technician",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -10277,7 +10276,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Technicien",
+											"text": "Technician",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -10565,7 +10564,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier les bâtiments 3D",
+											"text": "Modifiy the 3D buildings",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -10880,7 +10879,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier le modèle 3D",
+											"text": "Modify the 3D models",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -11195,7 +11194,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier la strucuture",
+											"text": "Modify the strucure",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -11510,7 +11509,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier les spécifications",
+											"text": "Modify the specification",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -11825,7 +11824,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier les paramètres de construction de tuiles 3D",
+											"text": "Modify the build's parameters of the 3D tiles",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -11893,7 +11892,7 @@
 									"containerExtending": false,
 									"left": 766.5,
 									"top": 467,
-									"width": 339,
+									"width": 338,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -13324,7 +13323,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Utilisateur",
+											"text": "User",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -13612,7 +13611,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Technicien",
+											"text": "Technician",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -13900,7 +13899,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "\"Système\"",
+											"text": "\"System\"",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -14018,7 +14017,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "~BDD",
+											"text": "~DB",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
