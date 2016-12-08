@@ -1,6 +1,6 @@
-#The PostgreSQL / PostGIS database
+## The PostgreSQL / PostGIS database
 
-##Shapefile importation
+### Shapefile importation
 ```
 shp2pgsql -S -s {SRID} -W "{encoding}" -a file.shp schema.table | psql -d data_base -h host -U user
 ```
@@ -19,13 +19,13 @@ shp2pgsql -S -s {SRID} -W "{encoding}" -a file.shp schema.table | psql -d data_b
 * h : hostname
 * U : username
 
-##SQL requests
+### SQL requests
 
 The geometry conversion :
 ```
 SELECT gid, ST_AsEWKT(ST_Force2D(geom)) AS geom,
-hauteur, nature, 
-ST_X(ST_Force2D((sub.gdump).geom)) AS x, 
+hauteur, nature,
+ST_X(ST_Force2D((sub.gdump).geom)) AS x,
 ST_Y(ST_Force2D((sub.gdump).geom)) AS y
 FROM (SELECT *, ST_DumpPoints((geom)) AS gdump FROM topo_bati) AS sub
 WHERE (sub.gdump).path[2] = 1
@@ -34,9 +34,9 @@ WHERE (sub.gdump).path[2] = 1
 A bounding box view :
 
 ```
-SELECT gid, 
-ST_AsEWKT(ST_Force2D(geom)) AS geom, 
-ST_XMin(ST_Force2D((sub.gdump).geom)) AS x, 
+SELECT gid,
+ST_AsEWKT(ST_Force2D(geom)) AS geom,
+ST_XMin(ST_Force2D((sub.gdump).geom)) AS x,
 ST_YMin(ST_Force2D((sub.gdump).geom)) AS y
 FROM (SELECT *, ST_DumpPoints(ST_Envelope(geom)) AS gdump FROM topo_bati) AS sub
 WHERE (sub.gdump).path[2] = 1
@@ -45,15 +45,15 @@ WHERE (sub.gdump).path[2] = 1
 **How to prepare the entities**
 
 ```
-SELECT bati.gid, 
-ST_Force2D(bati.geom) AS geom, 
-ST_AsEWKT(ST_Force2D(bati.geom)) AS wkt_geom, 
-bati.hauteur, 
-unaccent(bati.nature) AS nature, 
-ST_X(ST_Force2D((bati.gdump).geom)) AS first_point_x, 
+SELECT bati.gid,
+ST_Force2D(bati.geom) AS geom,
+ST_AsEWKT(ST_Force2D(bati.geom)) AS wkt_geom,
+bati.hauteur,
+unaccent(bati.nature) AS nature,
+ST_X(ST_Force2D((bati.gdump).geom)) AS first_point_x,
 ST_Y(ST_Force2D((bati.gdump).geom)) AS first_point_y,
-ST_AsEWKT(ST_Force2D(bounding_box.gdump)) AS bb_wkt_geom, 
-ST_XMin(ST_Force2D(bounding_box.gdump)) AS bb_x_min, 
+ST_AsEWKT(ST_Force2D(bounding_box.gdump)) AS bb_wkt_geom,
+ST_XMin(ST_Force2D(bounding_box.gdump)) AS bb_x_min,
 ST_YMin(ST_Force2D(bounding_box.gdump)) AS bb_y_min,
 (ST_X(ST_Force2D((bati.gdump).geom)) - ST_XMin(ST_Force2D(bounding_box.gdump)))::real AS delta_x,
 (ST_Y(ST_Force2D((bati.gdump).geom)) - ST_YMin(ST_Force2D(bounding_box.gdump)))::real AS delta_y
