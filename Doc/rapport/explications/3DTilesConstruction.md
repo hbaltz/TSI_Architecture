@@ -37,4 +37,4 @@ In summary, one tile description includes:
 - a tile.json with a bounding box definition, information necessary to handle a Hierarchical Level of Detail (HLOD).
 - a binary file with the description of the object and possibly some textures.
 
-Among the possibilities, **Batched 3D Models** is the best way to describe a building. This format is described in annex : [Desciption of B3DM](../Annexes/b3dm.md).
+Among the possibilities, **Batched 3D Models** is the best way to describe a building. This format is described in annex : [Description of B3DM](../Annexes/b3dm.md).
