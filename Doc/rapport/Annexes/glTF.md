@@ -12,7 +12,7 @@
 
 <p style="text-align:justify;">[glTF](https://www.khronos.org/gltf), the runtime asset format for WebGL, is an open standard for 3D models from Khronos (the same group that does WebGL and COLLADA). Cesium uses glTF as its 3D model format, and the Cesium team contributes heavily to the glTF spec and open-source COLLADA2GLTF converter. The use of glTF is recommended in Cesium for individual assets, e.g., an aircraft, a character, or a **3D building**.
 <br/>
-3D Tiles are created for streaming massive geospatial datasets where a single glTF model would be prohibitive. Given that glTF is optimized for rendering, that Cesium has a well-tested glTF loader, and that there are existing conversion tools for glTF, 3D Tiles use glTF for some tile formats such as **![b3dm](b3dm.md)** (used for 3D buildings).
+3D Tiles are created for streaming massive geospatial datasets where a single glTF model would be prohibitive. Given that glTF is optimized for rendering, that Cesium has a well-tested glTF loader, and that there are existing conversion tools for glTF, 3D Tiles use glTF for some tile formats such as **[b3dm](b3dm.md)** (used for 3D buildings).
 <br/>
 Taking this approach allows to improve Cesium, glTF, and **3D Tiles** at the same time, e.g., when we add mesh compression to glTF, it benefits 3D models in Cesium, the glTF ecosystem, and 3D Tiles.</p>
 
