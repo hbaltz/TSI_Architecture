@@ -31,7 +31,7 @@ See the [Batch Table](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/mas
 
 ### Binary glTF
 
-<p style="text-align:justify;">[glTF](https://www.khronos.org/gltf) is the runtime asset format for WebGL. [Binary glTF](https://github.com/KhronosGroup/glTF/tree/master/extensions/Khronos/KHR_binary_glTF=) is an extension defining a binary container for glTF. Batched 3D Model uses glTF 1.0 with the [KHR_binary_glTF](https://github.com/KhronosGroup/glTF/tree/master/extensions/Khronos/KHR_binary_glTF) extension.
+<p style="text-align:justify;">![glTF](gltf.md) is the runtime asset format for WebGL. [Binary glTF](https://github.com/KhronosGroup/glTF/tree/master/extensions/Khronos/KHR_binary_glTF=) is an extension defining a binary container for glTF. Batched 3D Model uses glTF 1.0 with the [KHR_binary_glTF](https://github.com/KhronosGroup/glTF/tree/master/extensions/Khronos/KHR_binary_glTF) extension.
 <br/>
 Binary glTF immediately follows the batch table. It begins 20 + batchTableByteLength bytes from the start of the arraybuffer and continues for the rest of arraybuffer. It may embed all of its geometry, texture, and animations, or it may refer to external sources for some or all of these data.
 <br/>
