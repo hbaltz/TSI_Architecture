@@ -43,14 +43,12 @@ Among the possibilities, **Batched 3D Models** is the best way to describe a bui
 
 > Note inclure texte de Samuel
 
-### How to actually create  a BDTopo building into a 3D Tile building
-
-> **TODO** changer titre
+### Preliminary steps on BDTOPO data
 
 In this part, we describe the necessary steps to build a 3D Tile object. First, some preliminary work has to be done to present the data in a usable format. The goal is to be able to automate as mush as possible the process.
 
 #### Input Data : BDTopo
-
+How to actually create a BDTopo building into a 3D Tile building
 BDTopo is a Shapefiles group with roads, energy network, hydrography, constructions, vegetation, etc...
 
 A PostGIS database is created with all the building shapes into a unique table. Then, we can make build a set of SQL request to transform the IGN data into almost ready to use 3DTile data. For instance, a bounding box enclosing the object, coordinates in degrees, etc.
@@ -61,13 +59,13 @@ We simplified the geometry because the 4th dimension have no use for 3D Tiles, a
 
 #### Importation into a PostGIS DB
 
-The best way to import the shapefiles into the postgresql database is using a tool named "shp2psql", which is in the *postgis* package.
+The best way to import the shapefiles into the postgresql database is "shp2psql", which is in the *postgis* package.
 ```
-shp2pgsql -S -s {SRID} -W "{encoding}" -a file.shp schema.table | 
+shp2pgsql -S -s {SRID} -W "{encoding}" -a file.shp schema.table |
 psql -d data_base -h host -U user
 ```
 
-The created table for *bati* is : 
+The created table for *bati* is :
 ```
 CREATE TABLE topo_bati
 (
@@ -85,29 +83,151 @@ CREATE TABLE topo_bati
 )
 ```
 
-#### Prepare the data
+### From a transformed BDTOPO to a set of 3DTiles
 
-Now we have all the *bati* into the database, but we need some informations more, like 
+A 3DTile has one description file (in **json** format) and an object file (as a **B3DM** binary file).
+The *json* file tells the viewer where to display an object (geolocation), and when to display it (linked to a distance and a point of view). In addition, a **tileset.json** provides an overall description of all the 3D Tiles.
+
+The transformed **BDTOPO** is ready to produce the following informations :
 
 * the bounding box of each entity,
 * the entity geometry,
 * the entity placement with its bounding box.
 
 **The bounding box**
-To generate an object's bounding box, we can make it with : *ST_Envelope(geom)*. It must be in degrees system coordinates, so we have to transform the geometry into the target SRID.
-We need the x min & y min of it.
+An object's bounding box is built with *ST_Envelope(geom)*. It must be in degrees system coordinates, so we have to transform the geometry into the target SRID.
 
 **The entity**
-We need the geometry in metric system, that is simple with data into *Lambert 93*.
-It is necessary to know the distance between this object and its bounding box in meters, this is the reason of bounding box (x min, y min).
+We need the geometry in metric system, that is simple with data expressed in *Lambert 93*. A transformation matrix will provide the relative positioning of the geometry inside this bounding box.
 
 **The result format**
-
-The illustration shows all the data available (from the subset of "E_BATI")
+This illustration shows the available data (from the subset of "E_BATI")
 ![The table bati in database](../images/Topo_Bati_1.png)
 
 ![The table bati in database](../images/Topo_Bati_2.png)
 
-#### Filling a 3DTile
+### From a transformed BDTOPO to a set of 3DTiles
 
-A
+A 3DTile has one description file (in **json** format) and an object file (as a **B3DM** binary file).
+The *json* file tells the viewer where to display an object (geolocation), and when to display it (linked to a distance and a point of view). In addition, a **tileset.json** provides an overall description of all the 3D Tiles.
+
+In this part, we match the mandatory fields of a 3D Tileset to their BD Topo counterparts.
+
+
+#### Tile metadata (json)
+
+> The **boundingVolume.region** property is an array of six numbers that define the bounding geographic region with the order `[west, south, east, north, minimum height, maximum height]`. Longitudes and latitudes are in radians, and heights are in meters above (or below) the WGS84 ellipsoid. Besides region, other bounding volumes, such as box and sphere, may be used.
+
+	"boundingVolume": {
+	    "region": [
+	      -1.2419052957251926,
+	      0.7395016240301894,
+	      -1.2415404171917719,
+	      0.7396563300150859,
+	      0,
+	      20.4
+	    ]
+	  }
+
+The rectangular bounding box (x,y coordinates) generated in the BDTOPO can be exported along with the **HAUTEUR** field which directly translate into `maximum height`.
+
+In addition, the **boundingVolume** should be bigger than the real size of the building. A constant can be automatically applied.
+
+***
+
+```
+"geometricError": 43.88464075650763,
+```
+
+> The **geometricError property** is a nonnegative number that defines the error, in meters, introduced if this tile is rendered and its children are not. At runtime, the geometric error is used to compute Screen-Space Error (SSE), i.e., the error measured in pixels. The SSE determines Hierarchical Level of Detail (HLOD) refinement, i.e., if a tile is sufficiently detailed for the current view or if its children should be considered.
+
+In the BDTOPO extract, there is nothing regarding groups of buildings. For instance, in the case of a school with several buildings, we could build a 3D Tile with a single global volume and *children* tiles (see below) with a more precise volume for each building.
+The *mother* tile would get a **geometricError** referring to the approximation of the shape.
+
+In our proposition, this value is not used.
+
+***
+
+```
+"refine" : "add",
+```
+>The refine property is a string that is either "replace" for replacement refinement or "add" for additive refinement. It is required for the root tile of a tileset; it is optional for all other tiles. When refine is omitted, it is inherited from the parent tile.
+
+In our case, we will always set this field to **"add"**.
+
+***
+
+```
+"content": {
+    "boundingVolume": {
+      "region": [
+			...
+      ]
+    },
+    "url": "2/0/0.b3dm"
+  },
+```
+> The **content** property is an object that contains metadata about the tile's content and a link to the content. **content.url** is a string that points to the tile's contents with an absolute or relative url. In the example above, the url, 2/0/0.b3dm, has a TMS tiling scheme, {z}/{y}/{x}.extension, but this is not required; see the roadmap Q&A.
+
+**"url"** will point to the a bd3m file. The naming scheme comes from the Bounding Volume Hierarchy (BVH) process.
+
+> **content.boundingVolume** defines an optional bounding volume similar to the top-level boundingVolume property. But unlike the top-level boundingVolume property, content.boundingVolume is a tightly fit bounding volume enclosing just the tile's contents.
+
+We won't use **content.boundingVolume** even if it is easy to build - as it will always be similar to the **boundingVolume**.
+
+In **content**, we can add metadata like the origin of the building data or the type of building. The viewer can then interpret that information and use a range of color to display this piece of information.
+
+#### The actual object (B3DM)
+
+
+
+#### Tileset.json
+
+The top-level object is basically a "super tile" encompassing all the other tiles.  It has four properties: asset, properties, geometricError, and root.
+
+```
+  "asset" : {
+    "version": "0.0",
+    "tilesetVersion": "e575c6f1-a45b-420a-b172-6449fa6e0a59"
+  },
+```
+This is purely for versioning purpose.
+***
+```  
+  "properties": {
+    "Height": {
+      "minimum": 1,
+      "maximum": 241.6
+    }
+  },
+```
+**properties.height** is build from a minimum height (which can't be null) and the height of the highest object.
+
+***
+```  
+  "geometricError": 494.50961650991815,
+```
+As with tile.json files, this field value will be arbitrary set.
+
+***
+```  
+  "root": {
+    "boundingVolume": {
+      "region": [
+        ...
+      ]
+    },
+    "geometricError": 268.37878244706053,
+    "content": {
+      "url": "0/0/0.b3dm",
+      "boundingVolume": {
+        "region": [
+        ...
+        ]
+      }
+    },
+    "children": [..]
+  }
+}
+```
+This part is similar to the one in **tile.json**. The **boundingVolume.region** is big enough to encompass all the object in the database. The **url** points to the highest level (see BVH) while the **children** section points to the next level **tile.json** files.

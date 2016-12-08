@@ -1,5 +1,5 @@
 ## Batched 3D Model  
-<center>![glTF logo](../images/b3dm.gif "glTF")</center>
+<center>![b3dm logo](../images/b3dm.gif "glTF")</center>
 
 > Taken from [AnalyticalGraphicsInc/3d-tiles/TileFormats/Batched3DModel/README.md](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/Batched3DModel/README.md)
 
