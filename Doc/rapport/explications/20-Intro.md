@@ -1,6 +1,4 @@
-# Introduction
-
-
+# Introduction  
 2D mapping is omnipresent in our lives. For several years, 3D has been developed in research laboratories and the technology is ready. New application have emerged, especially with augmented and virtual reality. Indeed, the 3D facilitates the immersion in the space and it is important for many fields: urbanism, transport ...
 
 We wish to bring a new dimension to cartography and geographic information by using existing databases containing architectural objects such as geolocalized buildings.
