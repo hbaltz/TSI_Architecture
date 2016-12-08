@@ -43,21 +43,22 @@ Among the possibilities, **Batched 3D Models** is the best way to describe a bui
 
 > Note inclure texte de Samuel
 
-### How to transform a BDTopo building into a 3D Tile building
+### How to actually transform a BDTopo building into a 3D Tile building
 
-#### Input Data : the BDTopo
-The BDTopo is a Shapefiles group with roads, energy network, hydrography, contructions, vegetation, etc...
-We used only some of the contructions Shapefiles as writen before.
-So we have seven contructions Shapefiles.
-We create a PostGIS database to import all the shapes into a unique table.
-After that we can make a preparation with SQL requests, calculate x,y coordinates, made a bounding box for each entity, etc...
+In this part, we describe the necessary steps to build a 3D Tile object. First, some preliminary work has to be done to present the data in a usable format. The goal is to be able to automate as mush as possible the process.
 
-The BDTopo Bati entities geometry is **MultiPolygonZM** : a 4D geometry, which is a 3D object (x,y,z), m (measure), the 4th dimension, which can be time or speed.
+#### Input Data : BDTopo
 
-We simplified the geometry because the 4th dimension have no value and not necessary.
-Like all entities are **MultiPolygonZM**, with only on polygon, we can cast it on **PolygonZ** and can simplest process it to made requests.
+BDTopo is a Shapefiles group with roads, energy network, hydrography, constructions, vegetation, etc...
 
-#### Import BDTopo into a PostGIS DB
+A PostGIS database is created with all the building shapes into a unique table. Then, we can make build a set of SQL request to transform the IGN data into almost ready to use 3DTile data. For instance, a bounding box enclosing the object, coordinates in degrees, etc.
+
+The BDTopo Bati entities geometry type is **MultiPolygonZM**: a 4D geometry, which is a 3D object (x,y,z) and m (for measurement) as a 4th dimension, which can be time or speed.
+
+We simplified the geometry because the 4th dimension have no use for 3D Tiles, and transformed it into a simpler type: **PolygonZ**.
+
+#### Importation into a PostGIS DB
+
 Importation directly with psql is better way. This is a tool named "shp2psql", which allow this using command line interface.
 ```
 shp2pgsql -S -s 2154 -W "LATIN1" -a file.shp schema.table | psql -d data_base -h host -U user
