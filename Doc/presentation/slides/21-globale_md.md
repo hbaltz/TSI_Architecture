@@ -1,4 +1,4 @@
-# Vision globale
+# Global vision
 
 ## Processing chain md => pdf
 
