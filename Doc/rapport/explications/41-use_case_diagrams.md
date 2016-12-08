@@ -1,5 +1,6 @@
-## Use case diagrams
+# Modelisation
 
+## Use case diagrams  
 We identify two users for our application:
   * The general users
   * The technicians
