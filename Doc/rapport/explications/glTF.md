@@ -2,7 +2,11 @@
 
 <center>![glTF logo](../images/glTF.png)</center>
 
+> Taken from [KhronosGroup/glTF/README.md](https://github.com/KhronosGroup/glTF/blob/master/README.md)
+
 <p style="text-align:justify;">glTF™ 1.0 (GL Transmission Format) is a royalty-free specification for the efficient transmission and loading of 3D scenes and models by applications. glTF minimizes both the size of 3D assets, and the runtime processing needed to unpack and use those assets. glTF defines an extensible, common publishing format for 3D content tools and services that streamlines authoring workflows and enables interoperable use of content across the industry.</p>
+
+> Taken from [KhronosGroup/glTF/specification/1.0/README.md](https://github.com/KhronosGroup/glTF/blob/master/specification/1.0/README.md)
 
 <center>![flux glTF](../images/flux_glTF.png)</center>
 
