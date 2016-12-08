@@ -2,8 +2,8 @@
 
 ## Régles :
 
-* Respecter la structure présente dans exemple/rapport/ : 01_"Nom du doc".md
-	*   Commencer le document par un titre de niveau 1 (souligner par des =====)
+* Respecter la structure présente dans exemple/rapport/ : "numero"_"nom_du_doc".md
+	*   Commencer le document par un titre de niveau 1 (souligner par des ===== ou qui commence par #)
 	*   Finir le document en sautant une ligne
 
 ## Création du pdf :

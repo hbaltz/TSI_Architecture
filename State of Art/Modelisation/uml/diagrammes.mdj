@@ -33,7 +33,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFYqyQ7ZMUT9/w="
 									},
-									"name": "\"Système\"",
+									"name": "\"System\"",
 									"ownedElements": [
 										{
 											"_type": "UMLAssociation",
@@ -134,7 +134,7 @@
 											"_parent": {
 												"$ref": "AAAAAAFYqysdqMW/fKw="
 											},
-											"name": "BDD",
+											"name": "DB",
 											"visibility": "package",
 											"isStatic": false,
 											"isLeaf": false,
@@ -156,7 +156,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFYqyQ7ZMUT9/w="
 									},
-									"name": "Se déplacer en 3D",
+									"name": "Move in 3D",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -168,7 +168,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFYqyQ7ZMUT9/w="
 									},
-									"name": "Naviguer sur une carte",
+									"name": "Navigate on a map",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -180,7 +180,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFYqyQ7ZMUT9/w="
 									},
-									"name": "Zoomer Dézoomer",
+									"name": "Zoom on a map",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -192,7 +192,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFYqyQ7ZMUT9/w="
 									},
-									"name": "Voir bâtiment en 3D",
+									"name": "See buildings in 3D",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -204,7 +204,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFYqyQ7ZMUT9/w="
 									},
-									"name": "Modifier des bâtiments",
+									"name": "Modify the 3D buildings",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -219,7 +219,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYqyP0g8UMm+g="
 							},
-							"name": "Utilisateur",
+							"name": "User",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -503,7 +503,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYqyP0g8UMm+g="
 							},
-							"name": "Technicien",
+							"name": "Technician",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -891,7 +891,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Utilisateur",
+											"text": "User",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -1179,7 +1179,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Technicien",
+											"text": "Technician",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -1467,7 +1467,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "\"Système\"",
+											"text": "\"System\"",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -1585,7 +1585,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "~BDD",
+											"text": "~DB",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -1786,7 +1786,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Naviguer sur une carte",
+											"text": "Navigate on a map",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -2101,7 +2101,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Se déplacer en 3D",
+											"text": "Move in 3D",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -2416,7 +2416,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Zoomer Dézoomer",
+											"text": "Zoom on a map",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -2731,7 +2731,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Voir bâtiment en 3D",
+											"text": "See buildings in 3D",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -3046,7 +3046,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier des bâtiments",
+											"text": "Modify the 3D buildings",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -6258,7 +6258,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYqz+rqtviybE="
 							},
-							"name": "Utilisateur",
+							"name": "User",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -6317,7 +6317,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYqz+rqtviybE="
 							},
-							"name": "Se déplacer en 3D",
+							"name": "Move in 3D",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -6329,7 +6329,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYqz+rqtviybE="
 							},
-							"name": "Se translater",
+							"name": "Move on the axis X Y Z",
 							"ownedElements": [
 								{
 									"_type": "UMLExtend",
@@ -6357,7 +6357,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYqz+rqtviybE="
 							},
-							"name": "Effectuer une rotation",
+							"name": "Rotate arotund the axis X Y Z",
 							"ownedElements": [
 								{
 									"_type": "UMLExtend",
@@ -6449,7 +6449,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Utilisateur",
+											"text": "User",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -6737,7 +6737,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Se déplacer en 3D",
+											"text": "Move in 3D",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -7467,13 +7467,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 650.5,
+											"left": 653,
 											"top": 250,
-											"width": 132,
+											"width": 143,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Se translater",
+											"text": "Move on the axis X Y Z",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -7539,9 +7539,9 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 645.5,
+									"left": 648,
 									"top": 243,
-									"width": 142,
+									"width": 154,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -7689,7 +7689,7 @@
 							"containerExtending": false,
 							"left": 616,
 							"top": 224,
-							"width": 201,
+							"width": 217,
 							"height": 64,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -7782,13 +7782,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 651.5,
+											"left": 661.5,
 											"top": 370,
-											"width": 136,
+											"width": 183,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Effectuer une rotation",
+											"text": "Rotate arotund the axis X Y Z",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -7854,9 +7854,9 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 646.5,
+									"left": 656.5,
 									"top": 363,
-									"width": 147,
+									"width": 194,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -8004,7 +8004,7 @@
 							"containerExtending": false,
 							"left": 616,
 							"top": 344,
-							"width": 207,
+							"width": 274,
 							"height": 64,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -8167,7 +8167,7 @@
 								"$ref": "AAAAAAFYq0BNad0UI5E="
 							},
 							"lineStyle": 1,
-							"points": "615:272;520:288",
+							"points": "615:273;520:288",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -8210,7 +8210,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 564,
-									"top": 354,
+									"top": 351,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -8244,7 +8244,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 535,
-									"top": 369,
+									"top": 366,
 									"width": 53,
 									"height": 13,
 									"autoResize": false,
@@ -8279,7 +8279,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 569,
-									"top": 325,
+									"top": 322,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -8311,7 +8311,7 @@
 								"$ref": "AAAAAAFYq0B5Id1glJw="
 							},
 							"lineStyle": 1,
-							"points": "615:355;520:338",
+							"points": "615:351;520:335",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -8341,7 +8341,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYq0HtWt+d/7Q="
 							},
-							"name": "Prendre en compte le niveau de détails",
+							"name": "Take the Level of Detail into account",
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -8353,7 +8353,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYq0HtWt+d/7Q="
 							},
-							"name": "Voir des bâtiments en 3D",
+							"name": "Observe buildings in 3D",
 							"ownedElements": [
 								{
 									"_type": "UMLInclude",
@@ -8426,7 +8426,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYq0HtWt+d/7Q="
 							},
-							"name": "Utilisateur",
+							"name": "User",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -8549,7 +8549,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Utilisateur",
+											"text": "User",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -8837,7 +8837,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Voir des bâtiments en 3D",
+											"text": "Observe buildings in 3D",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -9152,7 +9152,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Prendre en compte le niveau de détails",
+											"text": "Take the Level of Detail into account",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -9982,7 +9982,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYq0NzleHpifA="
 							},
-							"name": "Modifier les bâtiments 3D",
+							"name": "Modifiy the 3D buildings",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -10041,7 +10041,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYq0NzleHpifA="
 							},
-							"name": "Modifier le modèle 3D",
+							"name": "Modify the 3D models",
 							"ownedElements": [
 								{
 									"_type": "UMLExtend",
@@ -10069,7 +10069,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYq0NzleHpifA="
 							},
-							"name": "Modifier la strucuture",
+							"name": "Modify the strucure",
 							"ownedElements": [
 								{
 									"_type": "UMLExtend",
@@ -10097,7 +10097,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYq0NzleHpifA="
 							},
-							"name": "Modifier les spécifications",
+							"name": "Modify the specification",
 							"ownedElements": [
 								{
 									"_type": "UMLExtend",
@@ -10125,7 +10125,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYq0NzleHpifA="
 							},
-							"name": "Modifier les paramètres de construction de tuiles 3D",
+							"name": "Modify the build's parameters of the 3D tiles",
 							"ownedElements": [
 								{
 									"_type": "UMLExtend",
@@ -10153,7 +10153,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFYq0NzleHpifA="
 							},
-							"name": "Technicien",
+							"name": "Technician",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -10276,7 +10276,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Technicien",
+											"text": "Technician",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -10564,7 +10564,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier les bâtiments 3D",
+											"text": "Modifiy the 3D buildings",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -10879,7 +10879,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier le modèle 3D",
+											"text": "Modify the 3D models",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -11194,7 +11194,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier la strucuture",
+											"text": "Modify the strucure",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -11509,7 +11509,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier les spécifications",
+											"text": "Modify the specification",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -11824,7 +11824,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier les paramètres de construction de tuiles 3D",
+											"text": "Modify the build's parameters of the 3D tiles",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -11892,7 +11892,7 @@
 									"containerExtending": false,
 									"left": 766.5,
 									"top": 467,
-									"width": 339,
+									"width": 338,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -13323,7 +13323,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Utilisateur",
+											"text": "User",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -13611,7 +13611,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Technicien",
+											"text": "Technician",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -13899,7 +13899,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "\"Système\"",
+											"text": "\"System\"",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -14017,7 +14017,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "~BDD",
+											"text": "~DB",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -14218,7 +14218,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Naviguer sur une carte",
+											"text": "Navigate on a map",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -14533,7 +14533,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Zoomer Dézoomer",
+											"text": "Zoom on a map",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -15690,7 +15690,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Se déplacer en 3D",
+											"text": "Move in 3D",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -15999,13 +15999,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 810.5,
+											"left": 813,
 											"top": 354,
-											"width": 132,
+											"width": 143,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Se translater",
+											"text": "Move on the axis X Y Z",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -16071,9 +16071,9 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 805.5,
+									"left": 808,
 									"top": 347,
-									"width": 142,
+									"width": 154,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -16221,7 +16221,7 @@
 							"containerExtending": false,
 							"left": 776,
 							"top": 328,
-							"width": 201,
+							"width": 217,
 							"height": 64,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -16289,7 +16289,7 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 414,
+											"left": 398,
 											"top": 130,
 											"width": 0,
 											"height": 13,
@@ -16314,13 +16314,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 811.5,
+											"left": 813.5,
 											"top": 490,
-											"width": 136,
+											"width": 183,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Effectuer une rotation",
+											"text": "Rotate arotund the axis X Y Z",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -16340,7 +16340,7 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 414,
+											"left": 398,
 											"top": 130,
 											"width": 205,
 											"height": 13,
@@ -16366,7 +16366,7 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 414,
+											"left": 398,
 											"top": 130,
 											"width": 0,
 											"height": 13,
@@ -16386,9 +16386,9 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 806.5,
+									"left": 808.5,
 									"top": 483,
-									"width": 147,
+									"width": 194,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -16422,7 +16422,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 176,
+									"left": 160,
 									"top": 128,
 									"width": 10,
 									"height": 10,
@@ -16446,7 +16446,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 176,
+									"left": 160,
 									"top": 128,
 									"width": 10,
 									"height": 10,
@@ -16470,7 +16470,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 176,
+									"left": 160,
 									"top": 128,
 									"width": 10,
 									"height": 10,
@@ -16494,7 +16494,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 176,
+									"left": 160,
 									"top": 128,
 									"width": 10,
 									"height": 10,
@@ -16518,7 +16518,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 176,
+									"left": 160,
 									"top": 128,
 									"width": 10,
 									"height": 10,
@@ -16534,9 +16534,9 @@
 							"showShadow": true,
 							"containerChangeable": true,
 							"containerExtending": false,
-							"left": 776,
+							"left": 768,
 							"top": 464,
-							"width": 207,
+							"width": 274,
 							"height": 64,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -16699,7 +16699,7 @@
 								"$ref": "AAAAAAFYq0tUwUAuQks="
 							},
 							"lineStyle": 1,
-							"points": "775:379;656:403",
+							"points": "775:380;656:403",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -16741,8 +16741,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 712,
-									"top": 474,
+									"left": 708,
+									"top": 471,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -16775,8 +16775,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 683,
-									"top": 489,
+									"left": 680,
+									"top": 486,
 									"width": 53,
 									"height": 13,
 									"autoResize": false,
@@ -16810,8 +16810,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 717,
-									"top": 445,
+									"left": 713,
+									"top": 442,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -16843,7 +16843,7 @@
 								"$ref": "AAAAAAFYq0tUwUA5unU="
 							},
 							"lineStyle": 1,
-							"points": "775:477;656:456",
+							"points": "767:472;656:454",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -17344,7 +17344,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Voir des bâtiments en 3D",
+											"text": "Observe buildings in 3D",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -17659,7 +17659,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Prendre en compte le niveau de détails",
+											"text": "Take the Level of Detail into account",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -18539,7 +18539,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier les bâtiments 3D",
+											"text": "Modifiy the 3D buildings",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -18854,7 +18854,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier le modèle 3D",
+											"text": "Modify the 3D models",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -18956,7 +18956,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": -8,
+									"left": -16,
 									"top": 696,
 									"width": 10,
 									"height": 10,
@@ -18980,7 +18980,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": -8,
+									"left": -16,
 									"top": 696,
 									"width": 10,
 									"height": 10,
@@ -19004,7 +19004,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": -8,
+									"left": -16,
 									"top": 696,
 									"width": 10,
 									"height": 10,
@@ -19028,7 +19028,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": -8,
+									"left": -16,
 									"top": 696,
 									"width": 10,
 									"height": 10,
@@ -19052,7 +19052,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": -8,
+									"left": -16,
 									"top": 696,
 									"width": 10,
 									"height": 10,
@@ -19169,7 +19169,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier la strucuture",
+											"text": "Modify the strucure",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -19484,7 +19484,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier les spécifications",
+											"text": "Modify the specification",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -19799,7 +19799,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Modifier les paramètres de construction de tuiles 3D",
+											"text": "Modify the build's parameters of the 3D tiles",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -19867,7 +19867,7 @@
 									"containerExtending": false,
 									"left": 662.5,
 									"top": 1139,
-									"width": 339,
+									"width": 338,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {

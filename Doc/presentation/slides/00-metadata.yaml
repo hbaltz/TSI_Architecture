@@ -1,20 +1,20 @@
 ---
-title: Test
-subtitle: Projet de structuration
+title: V3ct3D
+subtitle: Structuring project
 author:
-- name: Elsa DARROMAN
-- name: Hugo BALTZ 
-- name: Mamady SAMASSA 
-- name: Julie MARCUZZI
+- name: Hugo BALTZ
 - name: Samuel BENKIMOUN
-- name: Hind HAMYA
-- name: Camille PARISEL
-- name: Anas SLIM 
-- name: Rudolf MILLET
-- name: Loic MESSAL
-- name: Sibawaih ER-RAZKI 
 - name: Victor BRINON
-- name: Romain MAZIERE
+- name: Elsa DARROMAN
 - name: Hanane DERBOUZ  
-date: 10 décemebre 2016
+- name: Sibawaih ER-RAZKI 
+- name: Hind HAMYA
+- name: Julie MARCUZZI
+- name: Romain MAZIERE
+- name: Loic MESSAL
+- name: Rudolf MILLET
+- name: Camille PARISEL
+- name: Mamady SAMASSA 
+- name: Anas SLIM 
+date: 10 december 2016
 ...
