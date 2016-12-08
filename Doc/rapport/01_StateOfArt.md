@@ -16,54 +16,10 @@ At first the goal of ITowns was to display imagery from laser scan in streets wi
 Databases
 --------------
 
-###IGN databases
+####IGN databases
 
 We found two interessent databases when we can find 3d informations. The first one is BDUNI, It is a intern database. It is also a contraction BD Carto®, BD Topo® and BD Adresse®. The second one is  BD Topo®  which is more interessebt because we find fields to build 3d models for all types of buildings.
 
-<table>
-    <tr>
-        <th>Nom de la BD</th>
-        <th>Description</th>
-    </tr>
-
-    <tr>
-		<td><!-- Nom de la BD -->
-		    BD TOPO
-		</td>
-		<td><!-- Description -->
-			<ul>
-		    	<li>Description vectorielle 3D qui est strucuturée en objets</li>
-			<li>Précision métrique</li>
-		    	<li>Echelles allant du 1 : 5 000 au 1 : 50 000</li>  
-			<li>Projections Lambert-93 (RGF 93) en métropole et UTM (système légal) en outre-mer</li> 
-			<li>Découpage départementale et par thème (Administratif (H), Bâti (E), Hydrographie (D), Orographie (G), Réseau routier (A), Toponyme (T), Transport énergie (C), Végétation (F), Voies ferrées et autres (B) et Zone d'activité (I))</li>  
-			
-			<table>
-				<tr>
-					<th>Thèmes</th>
-					<th>Cocuhes</th>
-				</tr>
-				<tr>
-					<td>Bâti (E)</td>
-					<td>
-						<ul>
-							<li>TERRAIN_SPORT</li>
-							<li>RESERVOIR</li>
-							<li>PISTE_AERODROME</li>
-							<li>CONSTRUCTION_SURFACIQUE</li>
-							<li>CONSTRUCTION_PONCTUELLE</li>
-							<li>CONSTRUCTION_LINEARIE</li>
-							<li>CONSTRUCTION_LEGERE</li>
-							<li>CIMETIERE</li>
-							<li>BATI_REMARQUABLE</li>
-							<li>BATI_INDUSTRIEL</li>
-							<li>BATI_INDIFERENCIE</li>
-						</ul>
-					</td>
-				</tr>
-
-			</table>
-</table>
 
 
 ####CityGML
@@ -96,25 +52,52 @@ The glTF format is composed of four files (or types of files).
 - The images (jpg, png, ...): It represents the textures of the model
 - The .glsl file: For rendering the models, it needs shader programs contain in this file.
 
-####Summarize of 3D objects
 
-| Format  | Langage       | Texture | Bibliothèque | Maillages | Taille | Chargement        | Avantages                                               | Inconvénients                                                | Utilisation       |    
-|---------|---------------|---------|--------------|-----------|--------|-------------------|---------------------------------------------------------|--------------------------------------------------------------|----------------------| 
-|
-| .3ds    | Binaire       | oui     | oui          | triangles | léger  | rapide            | soutenu par de nombreux modeleurs 3D                    | nombre de sommets limités, format de texture limité, etc ... | nombreux domaines    | 
-| Collada | xml           | oui     | oui          | polygones | lourd  | lent              | facile à utiliser                                       | fichier volumineux                                           | nombreux domaines    | 
-| stl     | Ascii         | non     | oui          | triangles | léger  | rapide            | rapide et compact, soutenu par de nombreux modeleurs 3D | ni texture ni informations de connectivité                   | imprimante 3D        | 
-| vtk     | binaire/Ascii | oui     | oui          | polygones | //     | //                | //                                                      | //                                                           | domaine médical      | 
-| CityGML | Uml/xml       | oui     | oui          | polygones | //     | niveaux de détail | niveaux de détail                                       | //                                                           | modèle de ville, SIG | 
-| ply     | binaire/Ascii | oui     | oui          | polygones | léger  |                   | couleur, transparence, texture                          |                                                              | nombreux domaines    | 
-| obj     | C++/OpenGL    | oui     | oui          | polygones |        |                   | connaissances des langages C++ et OpenGL                | faces toujours planes                                        | imprimante 3D        | 
-| gltf    | binaire       | oui     | oui          | ?         |        | rapide            | tampons, texture                                        | format nouveau                                               |                      | 
-| src     |               | oui     | ?            | polygones | ?      | niveaux de détail |                                                         |                                                              |                      | 
+####3D Tiles
 
-	
+3D Tiles are an [open specification](https://github.com/AnalyticalGraphicsInc/3d-tiles) for streaming massive heterogeneous 3D geospatial datasets. To expand on Cesium’s terrain and imagery streaming, 3D Tiles will be used to stream 3D content, including buildings, trees, point clouds, and vector data.
+Bringing techniques from graphics research, the movie industry, and the game industry to 3D geospatial, 3D Tiles define a spatial data structure and a set of tile formats designed for 3D and optimized for streaming and rendering. Tiles for 3D models use [glTF](https://www.khronos.org/gltf), the WebGL runtime asset format developed by Khronos, which the Cesium team heavily contributes to.
+3D tiles have many advantages than other formats, it is :
+-Open
+-Optimized for streaming and rendering
+-Designed for 3D
+-Interactive
+-Styleable
+-Adaptable
+-Flexible
+-Heterogeneous
+-Precise
+-Temporal
 
+###Libraries
 
+To visualize tiles we have to use 3D library. In our study we found many librariries but we kept just Cesium for our production chain. we will introduce also other libraries.
 
+####Mapbox GL JS 
 
-(1) http://www.itowns-project.org/
+Mapbox GL JS is a JavaScript library that uses the WebGL library. It help to have 3d render from vector tile with a fields of minimum and maximum high.
+
+####Tree.js
+
+Tree.js is a 3D JavaScript library using WebGL. It allows to create scenes, manipulate objects, manage cameras as well as light and render in a web browser. The possible renderings are:
+-WebGL,
+-CSS3D,
+-SVG. It is possible to embed the code in HTML5.
+
+####Cesium
+
+Cesium is a Javascript library for creating 2D and 3D maps. It uses WebGL.
+It includes the following data:
+-3D Tiles
+-WMS
+-Tile map service
+-OpenGIS Web Map Tile Service
+-OpenStreetMap
+-Bings Map
+-Esri ArcGIS Mapserver
+-Google Earth company
+-MapBox
+-Tile from image
+
+(1) https://www.itowns-project.org/
 (2) https://en.wikipedia.org/wiki/COLLADA
