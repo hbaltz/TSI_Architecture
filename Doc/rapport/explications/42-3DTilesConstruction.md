@@ -255,3 +255,7 @@ As with tile.json files, this field value will be arbitrary set.
 }
 ```
 This part is similar to the one in **tile.json**. The **boundingVolume.region** is big enough to encompass all the object in the database. The **url** points to the highest level (see BVH) while the **children** section points to the next level **tile.json** files.
+
+### Server
+
+All the files (json and B3DM) can be hosted in a database server and the queries will use the embedded BVH structure.
