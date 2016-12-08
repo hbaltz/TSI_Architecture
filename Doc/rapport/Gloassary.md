@@ -12,7 +12,7 @@ Enclosing box also call hyperrectangle of an geometric object.
 * #### BVH: Bounding Volume Hierarchy
 Tree structure on a set of geometric objects. All geometric objects are wrapped in bounding volumes that form the leaf nodes of the tree.
 
-* #### B3DM: Batched 3D Model
+* #### B3DM: Batched 3D Model
 Offline batching of heterogeneous 3D models for efficient streaming to a web client for rendering and interaction.
 
 * #### Cesium
@@ -33,7 +33,7 @@ French public institute which ensures the production,the maintenance and the dis
 * #### ITowns
 IGN technology platform for visualizing and exploiting 3D geographic data across the web.
 
-* #### LOD: Level of details
+* #### LOD: Level of details
 In client side, it is the decreasing of the complexity of a 3D model representation as it moves away from the viewer or according to other metrics such as object importance, viewpoint-relative speed or position. 
 
 * #### Oslandia
