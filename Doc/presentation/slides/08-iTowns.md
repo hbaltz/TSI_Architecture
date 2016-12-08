@@ -1,8 +1,6 @@
 ## iTowns
 
-#### What is it?
-
-* iTowns is an IGN technology platform for viewing and exploiting 3D geographic data across the web
+* IGN technology platform: viewing and exploiting 3D geographic data
 
 * Writen in Javascript/WebGl
 
