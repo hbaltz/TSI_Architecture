@@ -43,7 +43,9 @@ Among the possibilities, **Batched 3D Models** is the best way to describe a bui
 
 > Note inclure texte de Samuel
 
-### How to actually transform a BDTopo building into a 3D Tile building
+### How to actually create  a BDTopo building into a 3D Tile building
+
+> **TODO** changer titre
 
 In this part, we describe the necessary steps to build a 3D Tile object. First, some preliminary work has to be done to present the data in a usable format. The goal is to be able to automate as mush as possible the process.
 
@@ -66,3 +68,7 @@ shp2pgsql -S -s 2154 -W "LATIN1" -a file.shp schema.table | psql -d data_base -h
 Parameters are :
 
 #### Prepare the data
+
+#### Filling a 3DTile
+
+A
