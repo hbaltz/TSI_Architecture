@@ -57,11 +57,25 @@ The BDTopo Bati entities geometry is **MultiPolygonZM** : a 4D geometry, which i
 We simplified the geometry because the 4th dimension have no value and not necessary.
 Like all entities are **MultiPolygonZM**, with only on polygon, we can cast it on **PolygonZ** and can simplest process it to made requests.
 
-#### Import BDTopo into a PostGIS DB
-Importation directly with psql is better way. This is a tool named "shp2psql", which allow this using command line interface.
+#### Import BDTopo into the PostGIS DB
+
+The best way to import the shapefiles into the postgresql database is using a tool named "shp2psql", which is in the *postgis* package.
 ```
-shp2pgsql -S -s 2154 -W "LATIN1" -a file.shp schema.table | psql -d data_base -h host -U user
+shp2pgsql -S -s {SRID} -W "{encoding}" -a file.shp schema.table | psql -d data_base -h host -U user
 ```
-Parameters are :
+
+**Parameters for shp2pgsql are :**
+
+* S : generate simple geometries instead of MULTI geometries.
+* s {SRID} : specify the SRID
+* W {encoding} : encoding The character encoding of Shape's attribute column. (default : "UTF-8")
+* c : create a new table and populates it
+* a : appends a shapefile into an existing table
+
+**Parameters for psql are :**
+
+* d : database's name
+* h : hostname
+* U : username
 
 #### Prepare the data
