@@ -3,21 +3,8 @@ Presentation
 Introduction
 ============
 
-global vision of the project;
-organisation of the method scrum
-
 State of art
 ============
-
-## Context
-
-## Itowns
-
-## 3D Tiles
-
-## Existing 3D solutions
-
-## Data
 
 Modelisation
 ============
@@ -34,6 +21,9 @@ Modelisation
 
 Demonstrator
 ============
+
+Perspective
+===========
 
 Conclusion
 ==========
