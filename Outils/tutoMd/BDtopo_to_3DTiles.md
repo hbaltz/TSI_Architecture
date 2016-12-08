@@ -9,7 +9,7 @@ The attributes which describe the objects geometry are HAUTEUR, Z_MIN and Z_MAX
 
 ####Step 4:
 Calculate the footprint of the building.
-For each point of the geometry, keep the same coordinates (x,y) and affect the a unique z:
+For each point of the geometry, keep the same coordinates (x,y) and affect a unique z:
 z = z_maximal – hauteur
 
 ####Step 5:
