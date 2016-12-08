@@ -1,9 +1,7 @@
-## From BDTopo to a 3DTile server
-
+## From BDTopo to a 3DTile server  
 In this part, we will focus on how to extract the relevant data from the building set in BDTopo and deal with missing information. The final goal is to fill all the required fields in a 3D Tile.
 
-### Description of BDTopo "Bati"
-
+### Description of BDTopo "Bati"  
 > **Source** : the BDTopo extract that we have used as a basis for our study is freely available at [IGN](http://professionnels.ign.fr/bdtopo#tab-1), along with a 200pp document describing the source of data and the meaning of each data attributes.
 
 The **"E_BATI"** dataset contains 12 types of buildings (from "industrial" to "graveyard").  They all have the same set of attributes but, for simplicity we only focused on a few buildings. These are : **"BATI_INDUSTRIEL"**, **"BATI_REMARQUABLE"**, **"BATI_INDIFFERENCIE"**, **"CIMETIERE"**, **"LEGERE"**, **"RESERVOIR"**, **"TERRAIN_SPORT"**.
@@ -20,11 +18,10 @@ Definition of the attributes:
 In addition to those fields, the BDTopo extract that we have provides a geometry:
 - **wkt_geom** : MultiPolygonZM data with (x,y) in the metric system (Lambert93), and z as the height of the building from sea-level. It provides a full description of the bounding upper surface of the object.
 
-The illustration shows all the data available (from the subset of "E_BATI")
+The illustration shows all the data available (from the subset of "E_BATI")  
 ![Buildings in Saint-Nazaire (from BDTopo)](../images/BDTopo_Rendu.png)
 
-### What is a 3DTile ?
-
+### What is a 3DTile ?  
 > **Note**: A thorough study of the strenght and current status of Cesium's proposal regarding 3D Tile as a standard can be found in annex (see document: [Summary of Cesium 3D tiles standard proposal](../Annexe/3DTileDefinition.md)). It also provides links to relevant Cesium webpages.
 
 3DTile is an open source specification built on top of glTF (GL Transmission format). glTF is a very efficient way for transmitting and loading 3D content (as a binary stream). More information can be found in annex : [Description of glTF](../Annexes/glTF.md).
@@ -42,16 +39,13 @@ Among the possibilities, **Batched 3D Models** is the best way to describe a bui
 
 ### Data hierarchization following the Bounding Volume Hierarchy method
 
-#### Interest of the method:
-
+#### Interest of the method  
 The main interest of using a Bounding Volume Hierarchy (BVH) in our workflow lays in the fastening of the geometric processing it allows. Indeed, it is essential that in an interactive web-mapping application, the graphic calculation times are reduced as much as possible, to make its using smoother. Mapping whole cities with their buildings, in 3D, implies complex et heavy data. This data shouldn't be displayed all at once for some obvious reasons of speed and memory performance.
 
-Organizing data with a BVH tree, will rationalize the display, for each level of camera, by prioritizing the data to render. It also gives more cohesiveness to the information. For example, a small-scale point of view (with a weak zoom level) doesn't need to display small and minor geographic objects that would be barely visible and would overload the scene. Some objects also need to get their representation changed as the level of zoom changes too, to stay readable. If we zoom out, a building needs to get its shape generalized, meaning with less details and simplified shapes as the details wouldn't be visible anymore, and to lighten the data as more and more buildings are meant to be displayed as the view enlarges. Sometimes, some geographical objects could even need to be aggregated. The tree structure is, moreover, a far more efficient data organization. That makes each leaf of the tree (individual objects) or intermediate node (group of object) easily reachable via a database request. The complete dataset doesn't need to be read completely, as the right part of the tree can quickly be targeted.
+Organizing data with a BVH tree, will rationalize the display, for each level of camera, by prioritizing the data to render. It also gives more cohesiveness to the information. For example, a small-scale point of view (with a weak zoom level) doesn't need to display small and minor geographic objects that would be barely visible and would overload the scene. Some objects also need to get their representation changed as the level of zoom changes too, to stay readable. If we zoom out, a building needs to get its shape generalized, meaning with less details and simplified shapes as the details wouldn't be visible anymore, and to lighten the data as more and more buildings are meant to be displayed as the view enlarges. Sometimes, some geographical objects could even need to be aggregated. The tree structure is, moreover, a far more efficient data organization. That makes each leaf of the tree (individual objects) or intermediate node (group of object) easily reachable via a database request. The complete dataset doesn't need to be read completely, as the right part of the tree can quickly be targeted.  
+![BVH](../images/fig03-bvh.png "BVH")
 
-![](../images/fig03-bvh.png)
-
-#### Integration in the workflow
-
+#### Integration in the workflow  
 Our workflow follows the processes used by Oslandia, described in this article:
 [http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/IV-2-W1/201/2016/isprs-annals-IV-2-W1-201-2016.pdf](http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/IV-2-W1/201/2016/isprs-annals-IV-2-W1-201-2016.pdf)
 
@@ -61,12 +55,10 @@ In few words: a "weight formula" must have been decided before, to calculate the
 
 The output must be a 3DTiles database, organized following this structure, ready to be hosted on a server.
 
-### Preliminary steps on BDTOPO data
-
+### Preliminary steps on BDTOPO data  
 In this part, we describe the necessary steps to build a 3D Tile object. First, some preliminary work has to be done to present the data in a usable format. The goal is to be able to automate as mush as possible the process.
 
-#### Input Data : BDTopo
-
+#### Input Data : BDTopo  
 How to actually create a BDTopo building into a 3D Tile building
 BDTopo is a Shapefiles group with roads, energy network, hydrography, constructions, vegetation, etc...
 
@@ -76,8 +68,7 @@ The BDTopo Bati entities geometry type is **MultiPolygonZM**: a 4D geometry, whi
 
 We simplified the geometry because the 4th dimension have no use for 3D Tiles, and transformed it into a simpler type: **PolygonZ**.
 
-#### Importation into a PostGIS DB
-
+#### Importation into a PostGIS DB  
 The best way to import the shapefiles into the postgresql database is "shp2psql", which is in the *postgis* package.
 ```
 shp2pgsql -S -s {SRID} -W "{encoding}" -a file.shp schema.table |
@@ -102,8 +93,7 @@ CREATE TABLE topo_bati
 )
 ```
 
-### From a transformed BDTOPO to a set of 3DTiles
-
+### From a transformed BDTOPO to a set of 3DTiles  
 A 3DTile has one description file (in **json** format) and an object file (as a **B3DM** binary file).
 The *json* file tells the viewer where to display an object (geolocation), and when to display it (linked to a distance and a point of view). In addition, a **tileset.json** provides an overall description of all the 3D Tiles.
 
@@ -116,28 +106,26 @@ The transformed **BDTOPO** is ready to produce the following informations :
 **The bounding box**
 An object's bounding box is built with *ST_Envelope(geom)*. It must be in degrees system coordinates, so we have to transform the geometry into the target SRID.
 
-The simplest is to build one bounding box per object as shown in the following illustration.
-![Bounding boxes](../images/BDTopo_BB_Rendu.png)
+The simplest is to build one bounding box per object as shown in the following illustration.  
+![Bounding boxes](../images/BDTopo_BB_Rendu.png "Bounding boxes")
 
 **The entity**
 We need the geometry in metric system, that is simple with data expressed in *Lambert 93*. A transformation matrix will provide the relative positioning of the geometry inside this bounding box.
 
 **The result format**
-This illustration shows the available data (from the subset of "E_BATI")
-![The table bati in database](../images/Topo_Bati_1.png)
+This illustration shows the available data (from the subset of "E_BATI")  
+![The table bati in database](../images/Topo_Bati_1.png)  
 
 ![The table bati in database](../images/Topo_Bati_2.png)
 
-### From a transformed BDTOPO to a set of 3DTiles
-
+### From a transformed BDTOPO to a set of 3DTiles  
 A 3DTile has one description file (in **json** format) and an object file (as a **B3DM** binary file).
 The *json* file tells the viewer where to display an object (geolocation), and when to display it (linked to a distance and a point of view). In addition, a **tileset.json** provides an overall description of all the 3D Tiles.
 
 In this part, we match the mandatory fields of a 3D Tileset to their BD Topo counterparts.
 
 
-#### Tile metadata (json)
-
+#### Tile metadata (json)  
 > The **boundingVolume.region** property is an array of six numbers that define the bounding geographic region with the order `[west, south, east, north, minimum height, maximum height]`. Longitudes and latitudes are in radians, and heights are in meters above (or below) the WGS84 ellipsoid. Besides region, other bounding volumes, such as box and sphere, may be used.
 
 	"boundingVolume": {
@@ -199,14 +187,12 @@ We won't use **content.boundingVolume** even if it is easy to build - as it will
 
 In **content**, we can add metadata like the origin of the building data or the type of building. The viewer can then interpret that information and use a range of color to display this piece of information.
 
-#### The actual object (B3DM)
-
+#### The actual object (B3DM)  
 Each B3DM file has a very similar header (**version**, **magic number**...) in addition to the length of the encoded data describing the object, which is in **glTF** format.
 Basically, one has to use the geometry (which describe a flat polygon) and the height of the building to generate a set of vertex points and normal vectors.
 Since glTF is a well established format it should be relatively easy to adapt an existing library with the BDTOPO inputs.
 
-#### Tileset.json
-
+#### Tileset.json  
 The top-level object is basically a "super tile" encompassing all the other tiles.  It has four properties: asset, properties, geometricError, and root.
 
 ```
@@ -256,6 +242,5 @@ As with tile.json files, this field value will be arbitrary set.
 ```
 This part is similar to the one in **tile.json**. The **boundingVolume.region** is big enough to encompass all the object in the database. The **url** points to the highest level (see BVH) while the **children** section points to the next level **tile.json** files.
 
-### Server
-
+### Server  
 All the files (json and B3DM) can be hosted in a database server and the queries will use the embedded BVH structure.
