@@ -37,7 +37,7 @@ In summary, one tile description includes:
 Among the possibilities, **Batched 3D Models** is the best way to describe a building. This format is described in annex : [Description of B3DM](../Annexes/b3dm.md).
 
 
-### Data hierarchization following the Bounding Volume Hierarchy method
+### Data hierarchization following the Bounding Volume Hierarchy method  
 
 #### Interest of the method  
 The main interest of using a Bounding Volume Hierarchy (BVH) in our workflow lays in the fastening of the geometric processing it allows. Indeed, it is essential that in an interactive web-mapping application, the graphic calculation times are reduced as much as possible, to make its using smoother. Mapping whole cities with their buildings, in 3D, implies complex et heavy data. This data shouldn't be displayed all at once for some obvious reasons of speed and memory performance.
@@ -115,17 +115,10 @@ We need the geometry in metric system, that is simple with data expressed in *La
 **The result format**
 This illustration shows the available data (from the subset of "E_BATI")  
 ![The table bati in database](../images/Topo_Bati_1.png)  
-
 ![The table bati in database](../images/Topo_Bati_2.png)
 
-### From a transformed BDTOPO to a set of 3DTiles  
-A 3DTile has one description file (in **json** format) and an object file (as a **B3DM** binary file).
-The *json* file tells the viewer where to display an object (geolocation), and when to display it (linked to a distance and a point of view). In addition, a **tileset.json** provides an overall description of all the 3D Tiles.
+#### Tile metadata (json)
 
-In this part, we match the mandatory fields of a 3D Tileset to their BD Topo counterparts.
-
-
-#### Tile metadata (json)  
 > The **boundingVolume.region** property is an array of six numbers that define the bounding geographic region with the order `[west, south, east, north, minimum height, maximum height]`. Longitudes and latitudes are in radians, and heights are in meters above (or below) the WGS84 ellipsoid. Besides region, other bounding volumes, such as box and sphere, may be used.
 
 	"boundingVolume": {
