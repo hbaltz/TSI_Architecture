@@ -26,12 +26,49 @@ A tileset is a set of tiles organized in a spatial data structure, the tree. Eac
 ### LOD
 In client side, Level of detail involves decreasing the complexity of a 3D model representation as it moves away from the viewer or according to other metrics such as object importance, viewpoint-relative speed or position. Level of detail techniques increase the efficiency of rendering by decreasing the workload on graphics pipeline stages, usually vertex transformations.
 
-| Level Of Details | LOD 01 | LOD 02 | LOD 03 | LOD 04 |
-| ---- | : ---- : | :-----:| :----: | :----: |
-|**Tile structures**| 3D Building | + Roofing  | + Texture | + 3D Object |
-| **Required Data** | 2D frame contour | LOD 01 + Orthophoto HD| LOD 02 + oblique pictures + Detail of facades | LOD 03 + Architect Plans + Field surveys |
-| **Optional Data** | Textured DMT | Textured DMT | Textured DMT + Breaking lines | Textured DMT + Breaking lines |
-| **Applications** | *Departement*: * 3D simple * Map of the noises - Flood Map | *Agglomeration* Facilities - Modelization - Simulation | City - Urbanism - Communication - Tourism | City Heart - Immersion - Networks - Security |
+<table border>
+<tr>
+<th>Level Of Details </th>
+<th>LOD 01</th>
+<th>LOD 02</th>
+<th>LOD 03</th>
+<th>LOD 04</th>
+</tr>
+
+<tr>
+<td><b>Tile structures</td>
+<td>3D Building</td>
+<td>+ Roofing</td>
+<td>+ Texture</td>
+<td>+ 3D Object</td>
+</tr>
+
+<tr>
+<td><b>Required Data</td>
+<td>2D frame contour</td>
+<td>LOD 01 + Orthophoto HD</td>
+<td>LOD 02 + oblique pictures + Detail of facades</td>
+<td>LOD 03 + Architect Plans + Field surveys</td>
+</tr>
+
+<tr>
+<td><b>Optional Data</td>
+<td>Textured DMT</td>
+<td>Textured DMT</td>
+<td>Textured DMT + Breaking lines</td>
+<td>Textured DMT + Breaking lines</td>
+</tr>
+
+<tr>
+<td><b>Applications</td>
+<td>Departement: 3D simple - Map of the noises - Flood Map</td>
+<td>Agglomeration: Facilities - Modelization - Simulation</td>
+<td>City: Urbanism - Communication - Tourism</td>
+<td>City Heart: Immersion - Networks - Security</td>
+</tr>
+
+</table>
+
 
 
 ###Process 
