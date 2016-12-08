@@ -43,3 +43,4 @@ Each tileset is characterized by an identifier which is included in the request 
 The response to the request is a 3dtiles format which contains a gltf file that is required for display and can be loaded using the three.js library: [GLTFLoader.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/GLTFLoader.js)
 
 The cache contains a copy of the original data when it is expensive to retrieve compared to cache access time. Once some 3d vector tiles are stored in the cache, the client can access them directly through the cache rather than retrieving them by requests, which reduces the access time.
+
