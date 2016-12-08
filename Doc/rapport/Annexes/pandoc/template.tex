@@ -122,6 +122,21 @@ $endif$
 %
 % Tables
 
+\usepackage{longtable}
+\usepackage{booktabs}
+
+$if(longtable)$
+\begin{longtable}{S[table-format=3.0]
+                S[table-format=5.0]
+                S[table-format=8.0]}
+$endif$
+
+$if(tables)$
+\usepackage{array}
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\let\PBS=\PreserveBackslash
+$endif$
+
 $if(nographics)$
 $else$
 \usepackage{graphicx,grffile}
