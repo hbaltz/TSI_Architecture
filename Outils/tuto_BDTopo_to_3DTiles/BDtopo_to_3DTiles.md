@@ -12,6 +12,12 @@ Calculate the footprint of the building.
 For each point of the geometry, keep the same coordinates (x,y) and affect a unique z:
 z = z_maximal – hauteur
 
+![geom_bati_BDTopo](./geom_bati_BDTopo.png "geom_bati_BDTopo")
+> http://professionnels.ign.fr/sites/default/files/DC_BDTOPO_2_1.pdf
+
+![extract_BDTopo.png](./extract_BDTopo.png "extract_BDTopo.png")
+> Extract of a “Bâti” layer from the  BDTopo in the Allier department
+
 ####Step 5:
 Create a geographic BDD (geodatabse) thanks to PostGIS (in QGIS) which contains the attributes needed to create 3D Tiles building.
 2 attributes for each 3D building: 
