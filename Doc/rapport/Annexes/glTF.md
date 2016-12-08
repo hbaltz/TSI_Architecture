@@ -1,6 +1,6 @@
 # glTf
 
-<center>![glTF logo](../images/glTF.png)</center>
+<center>![glTF logo](../images/glTF.png "glTF")</center>
 
 > Taken from [KhronosGroup/glTF/README.md](https://github.com/KhronosGroup/glTF/blob/master/README.md)
 
