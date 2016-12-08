@@ -1,5 +1,4 @@
-# glTf
-
+## glTf  
 <center>![glTF logo](../images/glTF.png "glTF")</center>
 
 > Taken from [KhronosGroup/glTF/README.md](https://github.com/KhronosGroup/glTF/blob/master/README.md)
@@ -8,8 +7,7 @@
 
 > Taken from [AnalyticalGraphicsInc/3d-tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles)
 
-## What is the relationship between glTF and 3D Tiles ?
-
+### What is the relationship between glTF and 3D Tiles ?  
 <p style="text-align:justify;">[glTF](https://www.khronos.org/gltf), the runtime asset format for WebGL, is an open standard for 3D models from Khronos (the same group that does WebGL and COLLADA). Cesium uses glTF as its 3D model format, and the Cesium team contributes heavily to the glTF spec and open-source COLLADA2GLTF converter. The use of glTF is recommended in Cesium for individual assets, e.g., an aircraft, a character, or a **3D building**.
 <br/>
 3D Tiles are created for streaming massive geospatial datasets where a single glTF model would be prohibitive. Given that glTF is optimized for rendering, that Cesium has a well-tested glTF loader, and that there are existing conversion tools for glTF, 3D Tiles use glTF for some tile formats such as **[b3dm](b3dm.md)** (used for 3D buildings).
@@ -20,8 +18,7 @@ Taking this approach allows to improve Cesium, glTF, and **3D Tiles** at the sam
 
 <center>![flux glTF](../images/flux_glTF.png)</center>
 
-## Advantages
-
+### Advantages  
 * glTF bridges the gap between 3D content creation tools and modern GL applications by providing an efficient, extensible, interoperable format for the transmission and loading of 3D content.
 * glTF provides a vendor- and runtime-neutral format that can be loaded and rendered with minimal processing.
 * glTF is able to faithfully preserve full hierarchical scenes with nodes, meshes, cameras, materials, and animations, while enabling efficient delivery and fast loading.
@@ -32,8 +29,7 @@ Taking this approach allows to improve Cesium, glTF, and **3D Tiles** at the sam
 * glTF defines a mechanism that allows the addition of both general-purpose and vendor-specific extensions.
 * glTF is already used by Oslandia.
 
-## Warning
-
+### Warning  
 * glTF is not a streaming format.
 * glTF is not intended to be human-readable.
 * Version 1.0 of glTF does not define compression for geometry and other rich data.
