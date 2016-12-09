@@ -2,6 +2,7 @@
 
 ## Conclusion
 
+- Perspective
 - Suggestion of a chain of production
 - Creation of an interest
 
