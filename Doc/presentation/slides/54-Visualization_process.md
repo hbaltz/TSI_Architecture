@@ -1,4 +1,4 @@
-## Process
+## Visualisation: Process
 
 ![visualization](../images/visualization.jpg)
 
