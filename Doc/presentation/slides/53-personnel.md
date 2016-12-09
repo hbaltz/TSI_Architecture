@@ -1,8 +1,4 @@
-REX
-========
-
-Feedback
---------
+##Feedback
 
 ### Summary
 
@@ -11,4 +7,3 @@ Feedback
 
 * Challenge, Communication
 * Lack of synchronization
-
