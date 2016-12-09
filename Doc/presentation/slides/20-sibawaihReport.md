@@ -4,7 +4,7 @@
 ### Computer skills : 
 
 * Markdown 
-* 3D Javascript librairies
+* 3D Javascript libraries
 * Github
 
 ### Work method  :
