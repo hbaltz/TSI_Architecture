@@ -2,11 +2,13 @@
 
 * Relationship:
   *   Oslandia team
-  *   IGN team
+  *   IGN team  
+  
 * Technical skills: 
   *   3d data mechanisms
     *     cesium exploration
-    *     iTowns exploration
+    *     iTowns exploration  
+    
 * Team skills:
   *   team splitting
   *   feedbacks
