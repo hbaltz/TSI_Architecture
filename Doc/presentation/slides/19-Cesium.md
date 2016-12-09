@@ -1,4 +1,3 @@
-Cesium
-=====
-![Cesium](../images/cesium.png "")
+## Cesium
 
+![Cesium](../images/cesium.png "")
