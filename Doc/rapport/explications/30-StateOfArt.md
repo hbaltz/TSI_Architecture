@@ -25,17 +25,17 @@ The principle of tiling is to subdivide the entire surface of a map into small u
 
 ### IGN databases  
 BDUni is a database for the production of vector data in France containing all the themes that constitute the commercial products of the IGN such as Carto® BD and the RGE® vector which consists of BD Topo® and BD Address®.
-The BDUni regroups the geographical information belonging to 10 domains:
-* road network,
-* railways and other means of land transport,
-* distribution networks,
-* terrestrial hydrographic network,
-* buildings,
-* vegetation,
-* orography,
-* administrative zoning,
-* areas of activity or interest,
-* addresses.
+The BDUni regroups the geographical information belonging to 10 domains:    
+- road network,  
+- railways and other means of land transport,  
+- distribution networks,  
+- terrestrial hydrographic network,  
+- buildings,  
+- vegetation,  
+- orography,  
+- administrative zoning,  
+- areas of activity or interest,  
+- addresses.  
 
 The buildings, administrative zoning, areas of activity or interest and addresses domain are potentially apt to exploit the power of 3D Tiles.
 
@@ -58,11 +58,11 @@ Plus, a lot of 3D format exists with each their particularities and specificatio
 
 #### Format glTF  
 The [glTF](https://github.com/KhronosGroup/glTF) format was created by Khronos Group. It was created to be dynamic: the runtime processing for unpacking and using the 3D assets is minimised.
-The glTF format is composed of four files (or types of files).
-* .glTF file: this file is based on JSON format with a structure divided in five groups,
-* .bin file: this file is the geometry and animation file,
-* image file (jpg, png, ...): it represents the textures of the model,
-* .glsl file: for rendering the models, it needs shader programs contained in this file.
+The glTF format is composed of four files (or types of files).  
+- .glTF file: this file is based on JSON format with a structure divided in five groups,  
+- .bin file: this file is the geometry and animation file,  
+- image file (jpg, png, ...): it represents the textures of the model,  
+- .glsl file: for rendering the models, it needs shader programs contained in this file.  
 
 The glTF format is designed for 3D content transfer. Fast and efficient, it is more dynamic than others 3d formats but it is not a readable human format, even if tools for conversion are available to transform a 3d format (.dae, ...) into glTF.
 
@@ -72,17 +72,17 @@ Cesium 3D Tiles offers a solution for several questions in 3D like the overlap, 
 The 3D Tiles format is a group of tiles organized in a tree format. A tile is divided into a tree and each child is completely included in its parent. Splitting into 3D Tiles allows optimal optimization when rendering.
 The vector tiles in 3D tiles may include buildings, trees, point clouds and vector data. The tiles use the glTF model, the latter is a transmission format and 3D display that minimizes the size of the 3D tile.
 
-3D tiles are :
-* Open
-* Optimized for streaming and rendering
-* Designed for 3D
-*  Interactive
-* Styleable
-* Adaptable
-* Flexible
-* Heterogeneous
-* Precise
-* Temporal
+3D tiles are:  
+- Open  
+- Optimized for streaming and rendering  
+- Designed for 3D  
+- Interactive  
+- Styleable  
+- Adaptable  
+- Flexible  
+- Heterogeneous  
+- Precise  
+- Temporal  
 
 Display and rendering are especially designed for large databases, 3D Tiles allows to load only visible tiles within a requested range.
 To reduce queries to WebGL, the developer is asked to group the tiles. Plus, 3D Tiles integrates the different reference systems.
