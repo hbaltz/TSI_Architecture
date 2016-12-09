@@ -1,4 +1,4 @@
-## Personal report - Hugo BALTZ
+## Personal feedback - Hugo BALTZ
 
 ### Computer skills
 
