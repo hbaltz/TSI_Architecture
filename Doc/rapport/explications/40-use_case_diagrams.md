@@ -1,9 +1,9 @@
 # Modelisation
 
 ## Use case diagrams  
-We identify two users for our application:
-  * The general users  
-  * The technicians  
+We identify two users for our application:  
+  - The general users    
+  - The technicians    
 
 Our application interacts with an external database that contains the 3DTiles
 
