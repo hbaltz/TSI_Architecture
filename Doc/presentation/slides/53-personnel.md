@@ -1,8 +1,4 @@
-REX
-========
-
-Feedback
---------
+## Feedback
 
 ### Summary
 
@@ -14,4 +10,3 @@ Feedback
 * TileSet
 * glTF
 * iTowns
-

@@ -1,9 +1,9 @@
-#The PostGIS Database
+## The PostGIS Database
 
-##BDTopo
+### BDTopo
 * Select the *bati* Shapefiles
 * MultiPolygonZM
 
-##Import
+### Import
 * Using shp2psql
 * Result

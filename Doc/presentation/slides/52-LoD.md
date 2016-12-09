@@ -1,8 +1,3 @@
-LoD
-========
-
-Level of Details
-------------------------
-
+## Level of Details
 
 ![LoD](../images/lod.png)
