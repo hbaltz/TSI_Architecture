@@ -1,3 +1,3 @@
 ## Transverse view of a project
 
-![projectsteps](../images/lprojectsteps.png "project steps")
+![projectsteps](../images/projectsteps.png "project steps")
