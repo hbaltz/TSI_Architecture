@@ -4,7 +4,8 @@
 * Creation
 
 ##Object
-* geometry
-* relative positioning
+* Geometry
+* Relative positioning
 
 ##Result
+* Unique entity
