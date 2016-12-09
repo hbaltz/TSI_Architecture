@@ -1,12 +1,14 @@
-## Feedback
+REX
+========
+
+Feedback
+--------
 
 ### Summary
 
 * Production line of 3d vector tiles
-* iTowns
-* 3D Tiles
-* LoD
-* Bounding Box
-* TileSet
-* glTF
-* iTowns
+* tools: iTowns, 3D Tiles, LoD, TileSet, glTF, Markdown
+
+* Challenge, Communication
+* Lack of synchronization
+
