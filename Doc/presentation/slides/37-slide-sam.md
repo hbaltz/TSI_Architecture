@@ -1,4 +1,3 @@
 ## Chain of application
 
-
-![](../images/sam-cap.png)
+![Chain of application](../images/sam-cap.png)
