@@ -2,8 +2,8 @@
 
 ## Use case diagrams  
 We identify two users for our application:
-  * The general users
-  * The technicians
+  * The general users  
+  * The technicians  
 
 Our application interacts with an external database that contains the 3DTiles
 
@@ -20,7 +20,7 @@ To move in 3D, the user can translate on the axis X,Y,Z and rotate around these 
 To see buildings in 3D, the system takes the Level of Details in account:   
 ![Use case diagram see buildings in 3D](../images/Model1__UseCaseDiagramVoirBati3D_2.png "Use case diagram see buildings in 3D")  
 
-When the technician modifies a building, he can modify the 3D models , the structure, the specification of the building and the build's paramters of the 3D tiles:  
+When the technician modifies a building, he can modify the 3D model , the structure, the specification of the building and the build's paramters of the 3D tiles:  
 ![Use case diagram modify 3D buildings](../images/Model1__UseCaseDiagramModifierBati3D_3.png "Use case diagram see buildings in 3D")  
 
 You can see our complete use case diagram in the annexes.
