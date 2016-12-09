@@ -1,7 +1,14 @@
-## Transverse view of a project
+## Personnal report - Er-razki Sibawaih
 
-<<<<<<< HEAD
-![projectsteps](../images/projectsteps.png "project steps")
-=======
-![projectsteps](../images/projectsteps.png "project steps")
->>>>>>> 69414d9861869b689366464cc364e158bad26a4f
+
+### Computer skills : 
+
+* Markdown 
+* 3D Javascript librairies
+* Github
+
+### Work method  :
+
+* Scrum 
+* Big team
+* transverse view 
