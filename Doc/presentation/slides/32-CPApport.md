@@ -1,8 +1,8 @@
-## Personal report
+## Personal report - Camille Parisel
 
 ### Improved knowledge in Geomatic
 
-* Vocabulary, geolocation, data representation
+* Vocabulary, geolocation units, data representation
 
 ### Discovery of current standards and libraries
 
