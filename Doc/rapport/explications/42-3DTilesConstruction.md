@@ -6,17 +6,17 @@ In this part, we will focus on how to extract the relevant data from the buildin
 
 The **"E_BATI"** dataset contains 12 types of buildings (from "industrial" to "graveyard").  They all have the same set of attributes but, for simplicity we only focused on a few buildings. These are : **"BATI_INDUSTRIEL"**, **"BATI_REMARQUABLE"**, **"BATI_INDIFFERENCIE"**, **"CIMETIERE"**, **"LEGERE"**, **"RESERVOIR"**, **"TERRAIN_SPORT"**.
 
-Definition of the attributes:
-- **ID** : unique id
-- **PREC_PLANI** and **PREC_ALTI**: respectfully for the precision in positioning and the precision in altitude. The latter depends on the data source (*cadastre* or other)
-- **ORIGIN_BAT**: the origin of the data (example : *cadastre*)
-- **HAUTEUR**: height of the building
-- **Z_MIN** and **Z_MAX**: minimum and maximum height at the gutter level (basically at the base of the roof). For "TERRAIN_SPORT", these fields are replaced by **"Z_MOYEN"**.
+Definition of the attributes:  
+* **ID** : unique id  
+* **PREC_PLANI** and **PREC_ALTI**: respectfully for the precision in positioning and the precision in altitude. The latter depends on the data source (*cadastre* or other)  
+* **ORIGIN_BAT**: the origin of the data (example : *cadastre*)  
+* **HAUTEUR**: height of the building  
+* **Z_MIN** and **Z_MAX**: minimum and maximum height at the gutter level (basically at the base of the roof). For "TERRAIN_SPORT", these fields are replaced by **"Z_MOYEN"**. 
 
 > **Note**: The data imported from the *casdastre* has better 2D description and is more detailed than the other data (which have better 3D description and positioning) - *see p82 of BDTOPO_description manual version 2.2*
 
 In addition to those fields, the BDTopo extract that we have provides a geometry:
-- **wkt_geom** : MultiPolygonZM data with (x,y) in the metric system (Lambert93), and z as the height of the building from sea-level. It provides a full description of the bounding upper surface of the object.
+* **wkt_geom** : MultiPolygonZM data with (x,y) in the metric system (Lambert93), and z as the height of the building from sea-level. It provides a full description of the bounding upper surface of the object.
 
 The illustration shows all the data available (from the subset of "E_BATI")  
 ![Buildings in Saint-Nazaire (from BDTopo)](../images/BDTopo_Rendu.png)
@@ -31,8 +31,8 @@ The illustration shows all the data available (from the subset of "E_BATI")
 In 3D Tiles, a **tileset** is a set of **tiles** organized in a spatial data structure, the **tree**. A tile references a **feature** or set of features, such as 3D models. The **metadata** for each tile - not the actual contents - are defined in JSON, as well as the tileset.
 
 In summary, one tile description includes:
-- a tile.json with a bounding box definition, information necessary to handle a Hierarchical Level of Detail (HLOD).
-- a binary file with the description of the object and possibly some textures.
+* a tile.json with a bounding box definition, information necessary to handle a Hierarchical Level of Detail (HLOD).
+* a binary file with the description of the object and possibly some textures.
 
 Among the possibilities, **Batched 3D Models** is the best way to describe a building. This format is described in annex : [Description of B3DM](../Annexes/b3dm.md).
 
