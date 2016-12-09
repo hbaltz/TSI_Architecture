@@ -6,7 +6,7 @@ In this part, we will focus on how to extract the relevant data from the buildin
 
 The **"E_BATI"** dataset contains 12 types of buildings (from "industrial" to "graveyard").  They all have the same set of attributes but, for simplicity we only focused on a few buildings. These are : **"BATI_INDUSTRIEL"**, **"BATI_REMARQUABLE"**, **"BATI_INDIFFERENCIE"**, **"CIMETIERE"**, **"LEGERE"**, **"RESERVOIR"**, **"TERRAIN_SPORT"**.
 
-Definition of the attributes:
+Definition of the attributes:  
 * **ID** : unique id  
 * **PREC_PLANI** and **PREC_ALTI**: respectfully for the precision in positioning and the precision in altitude. The latter depends on the data source (*cadastre* or other)  
 * **ORIGIN_BAT**: the origin of the data (example : *cadastre*)  
