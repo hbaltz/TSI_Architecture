@@ -2,4 +2,4 @@
 
 ### Bounding Volume Hierarchy (BVH) method
 
-![](../images/fig03-bvh.png)
+![BVH](../images/fig03-bvh.png)

@@ -1,9 +1,9 @@
-# Personnal Report
+## Personnal Report
 
-##The global processing
+### The global processing
 
-##SQL
+### SQL
 
-##Organization
+### Organization
 * Team
 * Sprint
