@@ -3,4 +3,4 @@
 * 3d tiles format: gltf
 * GLTFLoader: three.js
 
-![response](../images/response.JPG)
+![response](../images/response.jpg)
